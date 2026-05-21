@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ElectricBillRefund | Commercial Utility Audit & Recovery</title>
-  <meta name="description" content="Independent commercial billing review and recovery. We identify recoverable utility billing overcharges and manage the process from start to finish. No upfront cost." />
+  <meta name="description" content="Independent commercial Ameren billing review and recovery. Not an energy supplier. Not a rate-switching pitch. We look back up to 36 months for recoverable billing errors. No upfront cost." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,7 +115,7 @@
       display:flex;
       align-items:center;
       color:white;
-      padding:68px 0 76px;
+      padding: 32px 0 76px;
       background:
         radial-gradient(ellipse at 82% 22%, rgba(29,158,117,.18), transparent 42%),
         radial-gradient(ellipse at 12% 88%, rgba(29,158,117,.09), transparent 42%),
@@ -319,7 +319,7 @@
     }
     .review-panel{
       background:var(--light);
-      border:1px solid var(--border);
+      border:1px solid rgba(15,42,68,.16);
       border-radius:26px;
       padding:28px;
       box-shadow:var(--shadow);
@@ -1393,7 +1393,7 @@
   border:1px solid var(--border);
   border-radius:28px;
   padding:30px;
-  box-shadow:0 24px 70px rgba(15,42,68,.08);
+  box-shadow:0 28px 78px rgba(15,42,68,.11);
 }
 
 .audit-framework-intro{
@@ -1446,7 +1446,7 @@
   top:0;
   bottom:0;
   width:1px;
-  background:linear-gradient(180deg,var(--border),rgba(26,138,103,.22),var(--border));
+  background:linear-gradient(180deg,rgba(15,42,68,.12),rgba(26,138,103,.32),rgba(15,42,68,.12));
 }
 
 .audit-item{
@@ -1490,7 +1490,7 @@
   background:radial-gradient(circle at 30% 20%,#fff,var(--pale));
   color:var(--green);
   font-size:28px;
-  border:1px solid rgba(26,138,103,.12);
+  border:1px solid rgba(26,138,103,.22);
 }
 
 .audit-item h4{
@@ -1661,7 +1661,7 @@
   .audit-framework-panel{
     max-width:520px !important;
     margin-left:auto !important;
-    padding:24px 24px 18px !important;
+    padding:30px 30px 24px !important;
     border-radius:26px !important;
   }
 
@@ -1729,7 +1729,7 @@
   }
 
   .audit-framework-panel{
-    max-width:490px !important;
+    max-width:548px !important;
   }
 
 }
@@ -5172,6 +5172,1668 @@
   }
 }
 
+
+/* ===== Script-aligned homepage refinement ===== */
+.hero-positioning-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:22px 0 0;
+  max-width:720px;
+}
+.hero-positioning-row span{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 13px;
+  border:1px solid rgba(36,169,126,.32);
+  background:rgba(36,169,126,.08);
+  color:rgba(255,255,255,.88);
+  border-radius:999px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.25px;
+  line-height:1.1;
+  white-space:nowrap;
+}
+.hero-positioning-row span:before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--green2);
+  flex:0 0 auto;
+}
+.hero-redesign-proof{
+  color:rgba(255,255,255,.70) !important;
+  font-weight:800;
+}
+@media(max-width:820px){
+  .hero-positioning-row-mobile{
+    display:flex !important;
+    gap:8px !important;
+    margin:20px 0 0 !important;
+  }
+  .hero-positioning-row span{
+    padding:8px 11px !important;
+    font-size:11px !important;
+  }
+}
+@media(max-width:430px){
+  .hero-positioning-row{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+  }
+  .hero-positioning-row span{
+    justify-content:flex-start !important;
+    width:100% !important;
+  }
+}
+
+
+
+/* ===== 10/10 HERO REFINEMENT — agency-polished desktop, current-site feel preserved ===== */
+@media(min-width:821px){
+  section.hero.hero-redesign{
+    min-height:710px !important;
+    padding:88px 0 96px !important;
+    background:
+      radial-gradient(ellipse at 14% 76%, rgba(36,169,126,.12), transparent 42%),
+      radial-gradient(ellipse at 78% 34%, rgba(36,169,126,.085), transparent 46%),
+      linear-gradient(135deg,#061827 0%,#082033 66%,#061827 100%) !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-inner{
+    max-width:1180px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-copy{
+    max-width:820px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-kicker{
+    margin-bottom:28px !important;
+    color:var(--green2) !important;
+    font-size:12px !important;
+    letter-spacing:4.4px !important;
+  }
+
+  section.hero.hero-redesign h1{
+    max-width:850px !important;
+    margin-bottom:34px !important;
+    color:#fff !important;
+    font-size:clamp(72px,6.35vw,94px) !important;
+    line-height:.965 !important;
+    letter-spacing:-1.55px !important;
+  }
+
+  section.hero.hero-redesign h1 em{
+    color:var(--green2) !important;
+    font-style:normal !important;
+  }
+
+  section.hero.hero-redesign .hero-primary-copy{
+    max-width:760px !important;
+    margin:0 !important;
+    color:rgba(255,255,255,.78) !important;
+    font-size:27px !important;
+    line-height:1.55 !important;
+    letter-spacing:-.2px !important;
+  }
+
+  section.hero.hero-redesign .hero-primary-copy strong{
+    color:#fff !important;
+    font-weight:800 !important;
+  }
+
+  section.hero.hero-redesign .hero-secondary-copy{
+    max-width:810px !important;
+    margin:20px 0 0 !important;
+    color:rgba(255,255,255,.55) !important;
+    font-size:20px !important;
+    line-height:1.6 !important;
+  }
+
+  section.hero.hero-redesign .hero-trust-bar{
+    display:inline-flex !important;
+    align-items:center !important;
+    gap:0 !important;
+    margin-top:28px !important;
+    padding:12px 17px !important;
+    border:1px solid rgba(36,169,126,.28) !important;
+    border-radius:999px !important;
+    background:rgba(255,255,255,.035) !important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.06) !important;
+    backdrop-filter:blur(10px) !important;
+  }
+
+  section.hero.hero-redesign .hero-trust-bar span{
+    position:relative !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    color:rgba(255,255,255,.82) !important;
+    font-size:13px !important;
+    line-height:1 !important;
+    font-weight:900 !important;
+    letter-spacing:.2px !important;
+    white-space:nowrap !important;
+    padding:0 15px !important;
+  }
+
+  section.hero.hero-redesign .hero-trust-bar span:first-child{
+    padding-left:8px !important;
+  }
+
+  section.hero.hero-redesign .hero-trust-bar span:last-child{
+    padding-right:8px !important;
+  }
+
+  section.hero.hero-redesign .hero-trust-bar span:not(:last-child):after{
+    content:"" !important;
+    position:absolute !important;
+    right:0 !important;
+    width:1px !important;
+    height:18px !important;
+    background:rgba(255,255,255,.16) !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-actions{
+    margin-top:46px !important;
+    gap:36px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-actions .btn{
+    min-width:286px !important;
+    min-height:58px !important;
+    padding:17px 30px !important;
+    border-radius:9px !important;
+    font-size:16px !important;
+    letter-spacing:.1px !important;
+    background:linear-gradient(135deg,#1A8A67,#25B486) !important;
+    box-shadow:0 20px 46px rgba(26,138,103,.25) !important;
+  }
+
+  section.hero.hero-redesign .hero-text-link{
+    color:#fff !important;
+    font-size:16px !important;
+    font-weight:900 !important;
+    padding-bottom:9px !important;
+    border-bottom:3px solid var(--green2) !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row,
+  section.hero.hero-redesign .hero-redesign-line,
+  section.hero.hero-redesign .hero-redesign-proof{
+    display:none !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-orbit{
+    opacity:.48 !important;
+    right:-180px !important;
+    top:96px !important;
+  }
+}
+
+@media(max-width:820px){
+  section.hero.hero-redesign .hero-trust-bar{
+    display:none !important;
+  }
+}
+
+
+/* Final hero copy refinements */
+section.hero.hero-redesign .hero-primary-copy{
+  max-width:760px !important;
+}
+section.hero.hero-redesign .hero-secondary-copy{
+  max-width:850px !important;
+}
+section.hero.hero-redesign .hero-trust-bar{
+  width:max-content !important;
+  max-width:100% !important;
+}
+@media(min-width:821px){
+  section.hero.hero-redesign .hero-redesign-copy{
+    padding-top:2px !important;
+  }
+  section.hero.hero-redesign .hero-secondary-copy{
+    margin-top:22px !important;
+  }
+  section.hero.hero-redesign .hero-trust-bar{
+    margin-top:30px !important;
+  }
+}
+@media(max-width:820px){
+  .hero-positioning-row-mobile span{
+    white-space:normal !important;
+  }
+}
+
+
+
+/* Final process path refinement: keep only the center green line */
+.route-glow,
+.route-base{
+  display:none !important;
+  opacity:0 !important;
+}
+.route-main{
+  opacity:.92 !important;
+}
+
+
+.form-submit-wrap{
+  margin-top:24px;
+}
+
+
+.contact-phone-label{font-size:.76rem!important;letter-spacing:.18em!important;opacity:.68;font-weight:700!important;}
+
+.contact-phone-number{color:#17935A!important;font-size:1.08rem!important;font-weight:700!important;letter-spacing:.01em!important;}
+
+
+/* Final desktop hero spacing refinement */
+@media (min-width:1024px){
+  .hero{
+    padding-top:72px !important;
+  }
+}
+
+
+
+/* ===== FINAL MOBILE HOMEPAGE + PROCESS PATH POLISH ===== */
+@media(max-width:768px){
+  .hero-redesign{
+    background:
+      radial-gradient(circle at 94% 38%, rgba(36,169,126,.10), transparent 32%),
+      radial-gradient(circle at 12% 92%, rgba(36,169,126,.08), transparent 34%),
+      linear-gradient(158deg,#061827 0%,#082235 62%,#062536 100%) !important;
+  }
+
+  .hero-redesign-inner{
+    padding-top:38px !important;
+    padding-bottom:54px !important;
+  }
+
+  .mobile-hero-10{
+    text-align:center !important;
+  }
+
+  .mobile-hero-kicker{
+    display:block !important;
+    font-size:9.4px !important;
+    letter-spacing:3.5px !important;
+    line-height:1.35 !important;
+    margin:0 0 24px !important;
+    color:var(--green2) !important;
+  }
+
+  .mobile-hero-10 h1{
+    font-size:clamp(39px,10.4vw,49px) !important;
+    line-height:1.04 !important;
+    letter-spacing:-.9px !important;
+    margin:0 auto !important;
+    max-width:100% !important;
+  }
+
+  .mobile-hero-10 h1:after{
+    display:none !important;
+  }
+
+  .mobile-hero-summary{
+    max-width:96% !important;
+    margin:30px auto 0 !important;
+    text-align:left !important;
+    color:rgba(255,255,255,.80) !important;
+    font-size:17.2px !important;
+    line-height:1.58 !important;
+    letter-spacing:-.12px !important;
+  }
+
+  .hero-positioning-row-mobile{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+    margin:24px auto 0 !important;
+    width:100% !important;
+    max-width:100% !important;
+  }
+
+  .hero-positioning-row-mobile span{
+    width:100% !important;
+    justify-content:flex-start !important;
+    padding:9px 13px !important;
+    border-radius:999px !important;
+    font-size:12px !important;
+    line-height:1.15 !important;
+    letter-spacing:.12px !important;
+    border-color:rgba(36,169,126,.36) !important;
+    background:rgba(36,169,126,.075) !important;
+  }
+
+  .hero-positioning-row-mobile span:before{
+    width:6px !important;
+    height:6px !important;
+    margin-right:1px !important;
+  }
+
+  .mobile-hero-cta{
+    margin-top:36px !important;
+    min-height:58px !important;
+    border-radius:999px !important;
+    font-size:16px !important;
+    padding:15px 20px !important;
+    background:linear-gradient(135deg,var(--green),var(--green2)) !important;
+    box-shadow:0 18px 44px rgba(26,138,103,.26) !important;
+  }
+
+  .mobile-hero-secondary{
+    margin-top:25px !important;
+    font-size:15.5px !important;
+    justify-content:center !important;
+  }
+
+  .hero-redesign-orbit{
+    opacity:.34 !important;
+    right:-154px !important;
+    top:230px !important;
+  }
+
+  #process .route-glow,
+  #process .route-base{
+    display:none !important;
+    opacity:0 !important;
+  }
+
+  #process .route-main{
+    stroke:#1A8A67 !important;
+    stroke-width:5 !important;
+    opacity:.52 !important;
+    filter:none !important;
+  }
+
+  #process .route-svg{
+    opacity:.88 !important;
+  }
+}
+
+@media(max-width:430px){
+  .hero-redesign-inner{
+    padding-top:32px !important;
+    padding-bottom:52px !important;
+  }
+
+  .mobile-hero-kicker{
+    font-size:8.7px !important;
+    letter-spacing:3.1px !important;
+    margin-bottom:22px !important;
+  }
+
+  .mobile-hero-10 h1{
+    font-size:clamp(36px,10.9vw,44px) !important;
+    line-height:1.04 !important;
+  }
+
+  .mobile-hero-summary{
+    max-width:95% !important;
+    margin-top:28px !important;
+    font-size:16.4px !important;
+    line-height:1.58 !important;
+  }
+
+  .hero-positioning-row-mobile{
+    gap:9px !important;
+    margin-top:23px !important;
+  }
+
+  .hero-positioning-row-mobile span{
+    font-size:11.4px !important;
+    padding:9px 12px !important;
+  }
+
+  .mobile-hero-cta{
+    margin-top:34px !important;
+    min-height:56px !important;
+    font-size:15.5px !important;
+  }
+
+  .mobile-hero-secondary{
+    margin-top:23px !important;
+    font-size:15px !important;
+  }
+
+  #process .route-main{
+    stroke-width:4.5 !important;
+    opacity:.48 !important;
+  }
+}
+
+
+/* ===== FINAL MOBILE 10/10 HERO TIGHTENING ===== */
+@media(max-width:768px){
+  section.hero.hero-redesign{
+    min-height:calc(100svh - 68px) !important;
+    display:flex !important;
+    align-items:stretch !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-inner{
+    min-height:calc(100svh - 68px) !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding-top:24px !important;
+    padding-bottom:40px !important;
+  }
+
+  .mobile-hero-10{
+    width:100% !important;
+  }
+
+  .mobile-hero-summary{
+    max-width:96% !important;
+    margin:28px auto 0 !important;
+    text-align:left !important;
+    font-size:16.8px !important;
+    line-height:1.55 !important;
+  }
+
+  .mobile-hero-summary strong{
+    color:#fff !important;
+    font-weight:900 !important;
+  }
+
+  .mobile-hero-secondary-copy{
+    max-width:96% !important;
+    margin:18px auto 0 !important;
+    text-align:left !important;
+    color:rgba(255,255,255,.56) !important;
+    font-size:13.8px !important;
+    line-height:1.55 !important;
+  }
+
+  .hero-positioning-row-mobile{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:9px !important;
+    margin:30px auto 0 !important;
+    width:100% !important;
+  }
+
+  .hero-positioning-row-mobile span{
+    width:auto !important;
+    max-width:calc(100vw - 44px) !important;
+    justify-content:center !important;
+    padding:8px 13px !important;
+    font-size:11.4px !important;
+    border-radius:999px !important;
+  }
+
+  .mobile-hero-cta{
+    margin-top:42px !important;
+    width:calc(100% - 34px) !important;
+    max-width:360px !important;
+  }
+
+  .mobile-hero-secondary{
+    margin-top:25px !important;
+  }
+}
+
+@media(max-width:430px){
+  section.hero.hero-redesign .hero-redesign-inner{
+    padding-top:22px !important;
+    padding-bottom:38px !important;
+  }
+
+  .mobile-hero-kicker{
+    margin-bottom:21px !important;
+  }
+
+  .mobile-hero-10 h1{
+    font-size:clamp(35px,10.7vw,43px) !important;
+  }
+
+  .mobile-hero-summary{
+    margin-top:26px !important;
+    font-size:16.1px !important;
+  }
+
+  .mobile-hero-secondary-copy{
+    margin-top:16px !important;
+    font-size:13.2px !important;
+  }
+
+  .hero-positioning-row-mobile{
+    margin-top:28px !important;
+    gap:8px !important;
+  }
+
+  .hero-positioning-row-mobile span{
+    font-size:10.9px !important;
+    padding:8px 12px !important;
+  }
+
+  .mobile-hero-cta{
+    margin-top:39px !important;
+  }
+}
+
+
+/* ===== FINAL MOBILE HERO REFINEMENT ===== */
+@media(max-width:820px){
+
+  .hero{
+    min-height:calc(100vh - 64px) !important;
+    padding:28px 0 42px !important;
+    display:flex !important;
+    align-items:stretch !important;
+  }
+
+  .hero .wrap{
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:space-between !important;
+    min-height:calc(100vh - 134px) !important;
+  }
+
+  .hero-split{
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:space-between !important;
+    flex:1 !important;
+  }
+
+  .hero-copy-block{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    text-align:center !important;
+    max-width:100% !important;
+  }
+
+  .kicker{
+    margin:0 0 24px !important;
+    font-size:9.5px !important;
+    letter-spacing:4.8px !important;
+    line-height:1.35 !important;
+  }
+
+  .hero h1{
+    margin:0 0 28px !important;
+    font-size:38px !important;
+    line-height:1.06 !important;
+    letter-spacing:-.6px !important;
+    max-width:360px !important;
+  }
+
+  .hero-copy{
+    font-size:18px !important;
+    line-height:1.55 !important;
+    margin:0 auto !important;
+    max-width:365px !important;
+    color:rgba(255,255,255,.78) !important;
+  }
+
+  .hero-copy strong{
+    color:#fff !important;
+    font-weight:900 !important;
+  }
+
+  .hero-recovery-line,
+  .hero-support,
+  .hero-subcopy{
+    margin-top:18px !important;
+    font-size:13.5px !important;
+    line-height:1.55 !important;
+    color:rgba(255,255,255,.58) !important;
+    max-width:365px !important;
+  }
+
+  .hero-proof-pills,
+  .hero-pill-row,
+  .proof-pills{
+    width:auto !important;
+    max-width:100% !important;
+    margin:28px auto 0 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:9px !important;
+  }
+
+  .hero-proof-pills span,
+  .hero-pill-row span,
+  .proof-pills span{
+    width:auto !important;
+    max-width:100% !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    padding:8px 14px 8px 13px !important;
+    border-radius:999px !important;
+    font-size:11px !important;
+    line-height:1.1 !important;
+    white-space:nowrap !important;
+    letter-spacing:.1px !important;
+  }
+
+  .hero-proof-pills span:before,
+  .hero-pill-row span:before,
+  .proof-pills span:before{
+    width:6px !important;
+    height:6px !important;
+    margin-right:8px !important;
+    flex:0 0 auto !important;
+  }
+
+  .hero-actions{
+    margin-top:60px !important;
+    width:100% !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:20px !important;
+    align-items:center !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .btn-green{
+    width:100% !important;
+    max-width:352px !important;
+    min-height:56px !important;
+    font-size:15px !important;
+    border-radius:999px !important;
+  }
+
+  .hero-actions a:not(.btn),
+  .hero-secondary-link,
+  .how-link{
+    margin-top:0 !important;
+    font-size:14px !important;
+    font-weight:900 !important;
+  }
+}
+
+@media(max-width:430px){
+  .hero{
+    padding:24px 0 36px !important;
+  }
+
+  .hero .wrap{
+    min-height:calc(100vh - 124px) !important;
+  }
+
+  .kicker{
+    margin-bottom:22px !important;
+    font-size:9px !important;
+    letter-spacing:4.4px !important;
+  }
+
+  .hero h1{
+    font-size:36px !important;
+    line-height:1.06 !important;
+    margin-bottom:26px !important;
+    max-width:350px !important;
+  }
+
+  .hero-copy{
+    font-size:17px !important;
+    max-width:350px !important;
+  }
+
+  .hero-recovery-line,
+  .hero-support,
+  .hero-subcopy{
+    font-size:13px !important;
+    margin-top:16px !important;
+    max-width:350px !important;
+  }
+
+  .hero-proof-pills,
+  .hero-pill-row,
+  .proof-pills{
+    margin-top:26px !important;
+    gap:8px !important;
+  }
+
+  .hero-actions{
+    margin-top:56px !important;
+    gap:18px !important;
+  }
+}
+
+/* Mobile process path: thinner, cleaner, and less ribbon-like */
+@media(max-width:820px){
+  .process .route-glow,
+  .process .route-base{
+    display:none !important;
+  }
+
+  .process .route-main{
+    stroke-width:4.5 !important;
+    opacity:.78 !important;
+    stroke-linecap:round !important;
+    stroke-linejoin:round !important;
+  }
+
+  .process .map-shell{
+    overflow:hidden !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE HOMEPAGE + PROCESS MAP ART DIRECTION
+   Desktop remains untouched.
+   ========================================================= */
+@media screen and (max-width:768px){
+
+  /* Full-height, deliberate mobile hero composition */
+  section.hero.hero-redesign{
+    min-height:calc(100svh - 64px) !important;
+    padding:0 !important;
+    background:
+      radial-gradient(circle at 106% 37%, rgba(36,169,126,.09), transparent 32%),
+      radial-gradient(circle at 0% 92%, rgba(36,169,126,.07), transparent 34%),
+      linear-gradient(158deg,#061827 0%,#082235 60%,#062536 100%) !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-inner{
+    min-height:calc(100svh - 64px) !important;
+    display:flex !important;
+    align-items:stretch !important;
+    justify-content:center !important;
+    padding-top:26px !important;
+    padding-bottom:34px !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-10{
+    min-height:calc(100svh - 124px) !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    text-align:center !important;
+    justify-content:flex-start !important;
+    width:100% !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-kicker{
+    display:block !important;
+    margin:0 0 26px !important;
+    color:#24A97E !important;
+    font-size:8.7px !important;
+    line-height:1.35 !important;
+    letter-spacing:3.7px !important;
+    font-weight:900 !important;
+    text-align:center !important;
+    text-transform:uppercase !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-10 h1{
+    margin:0 !important;
+    max-width:370px !important;
+    color:#fff !important;
+    font-size:clamp(36px,9.55vw,43px) !important;
+    line-height:1.05 !important;
+    letter-spacing:-.9px !important;
+    text-align:center !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-10 h1 span{
+    display:block !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-10 h1 span:nth-child(2){
+    white-space:nowrap !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-10 h1 em{
+    color:#24A97E !important;
+    font-style:normal !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-10 h1:after{
+    display:none !important;
+    content:none !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-summary{
+    display:block !important;
+    max-width:360px !important;
+    margin:34px auto 0 !important;
+    color:rgba(255,255,255,.80) !important;
+    font-size:18px !important;
+    line-height:1.55 !important;
+    letter-spacing:-.12px !important;
+    text-align:center !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-summary strong{
+    color:#fff !important;
+    font-weight:900 !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-secondary-copy{
+    display:block !important;
+    max-width:365px !important;
+    margin:19px auto 0 !important;
+    color:rgba(255,255,255,.58) !important;
+    font-size:13.2px !important;
+    line-height:1.55 !important;
+    text-align:center !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-secondary-copy .hero-recovery-line{
+    display:inline !important;
+    color:inherit !important;
+    font-size:inherit !important;
+    line-height:inherit !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    width:auto !important;
+    max-width:100% !important;
+    margin:31px auto 0 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:8px !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile span{
+    width:auto !important;
+    max-width:max-content !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:7px 14px !important;
+    border-radius:999px !important;
+    border:1px solid rgba(36,169,126,.46) !important;
+    background:rgba(36,169,126,.075) !important;
+    color:rgba(255,255,255,.90) !important;
+    font-size:11px !important;
+    font-weight:900 !important;
+    line-height:1.1 !important;
+    white-space:nowrap !important;
+    letter-spacing:.05px !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile span:before{
+    content:"" !important;
+    display:inline-block !important;
+    width:6px !important;
+    height:6px !important;
+    margin-right:8px !important;
+    border-radius:50% !important;
+    background:#24A97E !important;
+    flex:0 0 auto !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-cta{
+    width:88% !important;
+    max-width:356px !important;
+    height:52px !important;
+    min-height:52px !important;
+    max-height:52px !important;
+    margin:64px auto 0 !important;
+    padding:0 18px !important;
+    border-radius:999px !important;
+    background:linear-gradient(135deg,#17935A,#24A97E) !important;
+    color:#fff !important;
+    font-size:15.4px !important;
+    font-weight:900 !important;
+    line-height:1 !important;
+    box-shadow:0 16px 34px rgba(23,147,90,.24) !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-secondary{
+    display:inline-flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    margin:27px auto 0 !important;
+    color:#fff !important;
+    font-size:14.8px !important;
+    line-height:1.1 !important;
+    font-weight:900 !important;
+    text-decoration:none !important;
+    opacity:.94 !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-secondary:after{
+    content:"→" !important;
+    margin-left:8px !important;
+    color:#24A97E !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-orbit{
+    width:230px !important;
+    height:230px !important;
+    right:-150px !important;
+    top:190px !important;
+    border-width:32px !important;
+    opacity:.26 !important;
+  }
+}
+
+@media screen and (max-width:430px){
+  section.hero.hero-redesign .hero-redesign-inner{
+    padding-top:23px !important;
+    padding-bottom:31px !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-10{
+    min-height:calc(100svh - 118px) !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-kicker{
+    margin-bottom:25px !important;
+    font-size:8.3px !important;
+    letter-spacing:3.25px !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-10 h1{
+    max-width:360px !important;
+    font-size:clamp(35px,9.45vw,40px) !important;
+    line-height:1.06 !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-summary{
+    max-width:360px !important;
+    margin-top:32px !important;
+    font-size:17.2px !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-secondary-copy{
+    max-width:358px !important;
+    margin-top:18px !important;
+    font-size:12.9px !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    margin-top:30px !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile span{
+    padding:7px 13px !important;
+    font-size:10.6px !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-cta{
+    width:86% !important;
+    height:51px !important;
+    min-height:51px !important;
+    max-height:51px !important;
+    margin-top:62px !important;
+    font-size:14.8px !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-secondary{
+    margin-top:26px !important;
+    font-size:14.4px !important;
+  }
+}
+
+/* Mobile process map: use a cleaner single geometric path instead of the ribbon-like curve */
+@media screen and (max-width:820px){
+  #process .route-svg{
+    display:none !important;
+  }
+
+  #process .mobile-route-svg{
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    pointer-events:none !important;
+    z-index:1 !important;
+  }
+
+  #process .mobile-route-main{
+    fill:none !important;
+    stroke:url(#mobileRouteGradient) !important;
+    stroke-width:6 !important;
+    stroke-linecap:round !important;
+    stroke-linejoin:round !important;
+    opacity:.68 !important;
+  }
+
+  #process .route-glow,
+  #process .route-base{
+    display:none !important;
+  }
+}
+
+@media screen and (min-width:821px){
+  #process .mobile-route-svg{
+    display:none !important;
+  }
+}
+
+
+/* ===== MOBILE PROCESS PATH FINAL CURVE REFINEMENT ===== */
+@media(max-width:820px){
+
+  .process .route-glow,
+  .process .route-base{
+    display:none !important;
+  }
+
+  .process .route-main{
+    stroke-width:7.5 !important;
+    opacity:.76 !important;
+    stroke-linecap:round !important;
+    stroke-linejoin:round !important;
+  }
+}
+
+/* Fallback: hide the glow/base on all small layouts even if the browser ignores SVG path d in CSS */
+@media(max-width:820px){
+  .route-glow,
+  .route-base{
+    display:none !important;
+  }
+}
+
+
+/* ===== MOBILE PROCESS ACTUAL PATH FIX ===== */
+@media(max-width:820px){
+  .process .route-glow,
+  .process .route-base{
+    display:none !important;
+  }
+
+  .process .route-main{
+    stroke-width:7.5 !important;
+    opacity:.78 !important;
+    stroke-linecap:round !important;
+    stroke-linejoin:round !important;
+  }
+}
+
+
+/* ===== MOBILE PROCESS ORGANIC PATH REFINEMENT ===== */
+@media(max-width:820px){
+  .process .route-glow,
+  .process .route-base{
+    display:none !important;
+  }
+  .process .route-main{
+    stroke-width:7.5 !important;
+    opacity:.78 !important;
+    stroke-linecap:round !important;
+    stroke-linejoin:round !important;
+  }
+}
+
+
+/* ===== FINAL MOBILE PROCESS PATH: USE DESKTOP PATH GEOMETRY ===== */
+@media(max-width:820px){
+  #process .mobile-route-svg{
+    display:none !important;
+  }
+
+  #process .route-svg{
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    pointer-events:none !important;
+    z-index:1 !important;
+    opacity:.92 !important;
+  }
+
+  #process .route-glow{
+    display:none !important;
+  }
+
+  #process .route-base{
+    display:none !important;
+  }
+
+  #process .route-main{
+    display:block !important;
+    fill:none !important;
+    stroke:url(#routeGradient) !important;
+    stroke-width:8 !important;
+    stroke-linecap:round !important;
+    stroke-linejoin:round !important;
+    opacity:.92 !important;
+    filter:none !important;
+  }
+}
+
+
+/* ===== MOBILE PROCESS PATH FINAL ORGANIC GEOMETRY ===== */
+@media(max-width:820px){
+  #process .mobile-route-svg{
+    display:none !important;
+  }
+  #process .route-svg{
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    pointer-events:none !important;
+    z-index:1 !important;
+  }
+  #process .route-glow,
+  #process .route-base{
+    display:none !important;
+  }
+  #process .route-main{
+    display:block !important;
+    fill:none !important;
+    stroke:url(#routeGradient) !important;
+    stroke-width:8 !important;
+    stroke-linecap:round !important;
+    stroke-linejoin:round !important;
+    opacity:.92 !important;
+    filter:none !important;
+  }
+}
+
+
+/* ===== MOBILE PROCESS PATH HIGHER FINAL ENTRY ===== */
+@media(max-width:820px){
+  #process .mobile-route-svg{
+    display:none !important;
+  }
+  #process .route-svg{
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    pointer-events:none !important;
+    z-index:1 !important;
+  }
+  #process .route-glow,
+  #process .route-base{
+    display:none !important;
+  }
+  #process .route-main{
+    display:block !important;
+    fill:none !important;
+    stroke:url(#routeGradient) !important;
+    stroke-width:8 !important;
+    stroke-linecap:round !important;
+    stroke-linejoin:round !important;
+    opacity:.92 !important;
+    filter:none !important;
+  }
+}
+
+
+/* ===== MOBILE PROCESS SECTION SPACING CORRECTION ===== */
+@media(max-width:820px){
+
+  /* Keep the section breathing room, but reduce the excess air above the heading only */
+  #process{
+    padding-top:56px !important;
+    padding-bottom:74px !important;
+  }
+
+  #process .section-head,
+  #process .process-head,
+  #process .section-title-wrap{
+    margin-top:0 !important;
+    margin-bottom:24px !important;
+  }
+
+  #process .map-shell,
+  #process .process-map{
+    margin-top:22px !important;
+    margin-bottom:0 !important;
+  }
+}
+
+
+/* ===== FINAL MOBILE HOMEPAGE HIERARCHY REFINEMENT ===== */
+@media(max-width:820px){
+
+  /* Tighten the top half without changing desktop */
+  .hero{
+    padding-top:20px !important;
+    padding-bottom:34px !important;
+  }
+
+  .hero .wrap{
+    min-height:calc(100vh - 112px) !important;
+  }
+
+  .kicker{
+    margin-bottom:18px !important;
+  }
+
+  .hero h1{
+    margin-bottom:22px !important;
+  }
+
+  .hero-copy{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  /* Make the recovery sentence easier to read while keeping it secondary */
+  .hero-recovery-line,
+  .hero-support,
+  .hero-subcopy{
+    margin-top:15px !important;
+    color:rgba(255,255,255,.68) !important;
+    font-size:13.6px !important;
+    line-height:1.5 !important;
+  }
+
+  /* Bring proof points and CTAs up slightly */
+  .hero-proof-pills,
+  .hero-pill-row,
+  .proof-pills{
+    margin-top:22px !important;
+    gap:8px !important;
+  }
+
+  .hero-actions{
+    margin-top:46px !important;
+    gap:17px !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .btn-green{
+    min-height:55px !important;
+  }
+}
+
+@media(max-width:430px){
+  .hero{
+    padding-top:18px !important;
+    padding-bottom:32px !important;
+  }
+
+  .hero .wrap{
+    min-height:calc(100vh - 108px) !important;
+  }
+
+  .kicker{
+    margin-bottom:17px !important;
+  }
+
+  .hero h1{
+    margin-bottom:21px !important;
+  }
+
+  .hero-recovery-line,
+  .hero-support,
+  .hero-subcopy{
+    margin-top:14px !important;
+    font-size:13.4px !important;
+    line-height:1.5 !important;
+  }
+
+  .hero-proof-pills,
+  .hero-pill-row,
+  .proof-pills{
+    margin-top:21px !important;
+  }
+
+  .hero-actions{
+    margin-top:44px !important;
+  }
+}
+
+
+/* ===== MOBILE HOMEPAGE 10/10 FINAL POLISH ===== */
+@media(max-width:820px){
+
+  /* Keep the hero premium, but make the persuasive stack feel intentional */
+  .hero{
+    padding-top:18px !important;
+    padding-bottom:30px !important;
+  }
+
+  .hero .wrap{
+    min-height:calc(100vh - 104px) !important;
+  }
+
+  .kicker{
+    margin-bottom:16px !important;
+  }
+
+  .hero h1{
+    margin-bottom:20px !important;
+  }
+
+  .hero-copy{
+    font-size:17.2px !important;
+    line-height:1.5 !important;
+    max-width:350px !important;
+  }
+
+  .hero-copy strong{
+    color:#fff !important;
+    font-weight:900 !important;
+  }
+
+  /* Recovery line should read as reinforcement, not disclaimer text */
+  .hero-recovery-line,
+  .hero-support,
+  .hero-subcopy{
+    margin-top:13px !important;
+    max-width:338px !important;
+    font-size:13.6px !important;
+    line-height:1.45 !important;
+    color:rgba(255,255,255,.72) !important;
+  }
+
+  /* Turn three pills into one intentional reassurance system */
+  .hero-proof-pills,
+  .hero-pill-row,
+  .proof-pills{
+    width:100% !important;
+    max-width:306px !important;
+    margin:20px auto 0 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:8px !important;
+  }
+
+  .hero-proof-pills span,
+  .hero-pill-row span,
+  .proof-pills span{
+    width:100% !important;
+    min-height:28px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    box-sizing:border-box !important;
+    padding:7px 14px !important;
+    border-radius:999px !important;
+    font-size:11px !important;
+    line-height:1 !important;
+    white-space:nowrap !important;
+    letter-spacing:.05px !important;
+  }
+
+  .hero-proof-pills span:before,
+  .hero-pill-row span:before,
+  .proof-pills span:before{
+    width:6px !important;
+    height:6px !important;
+    margin-right:10px !important;
+    flex:0 0 auto !important;
+  }
+
+  /* Tighten CTA grouping so the action feels inevitable */
+  .hero-actions{
+    margin-top:38px !important;
+    width:100% !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:14px !important;
+    align-items:center !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .btn-green{
+    width:100% !important;
+    max-width:350px !important;
+    min-height:55px !important;
+    border-radius:999px !important;
+    font-size:15px !important;
+    box-shadow:0 18px 42px rgba(31,199,154,.16) !important;
+  }
+
+  .hero-actions a:not(.btn),
+  .hero-secondary-link,
+  .how-link{
+    margin-top:0 !important;
+    font-size:14px !important;
+    font-weight:900 !important;
+    letter-spacing:.01em !important;
+  }
+}
+
+@media(max-width:430px){
+  .hero{
+    padding-top:16px !important;
+    padding-bottom:28px !important;
+  }
+
+  .hero .wrap{
+    min-height:calc(100vh - 100px) !important;
+  }
+
+  .kicker{
+    margin-bottom:15px !important;
+  }
+
+  .hero h1{
+    margin-bottom:19px !important;
+  }
+
+  .hero-copy{
+    font-size:17px !important;
+    line-height:1.48 !important;
+    max-width:342px !important;
+  }
+
+  .hero-recovery-line,
+  .hero-support,
+  .hero-subcopy{
+    margin-top:12px !important;
+    max-width:332px !important;
+    font-size:13.4px !important;
+    line-height:1.45 !important;
+  }
+
+  .hero-proof-pills,
+  .hero-pill-row,
+  .proof-pills{
+    max-width:304px !important;
+    margin-top:19px !important;
+    gap:8px !important;
+  }
+
+  .hero-actions{
+    margin-top:36px !important;
+    gap:14px !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .btn-green{
+    max-width:350px !important;
+    min-height:55px !important;
+  }
+}
+
+
+/* ===== TRUE FINAL MOBILE FIX: HERO PILLS + PROCESS MAP ORDER ===== */
+@media screen and (max-width:820px){
+
+  /* Make the three mobile hero pills an intentional equal-width system */
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:310px !important;
+    max-width:calc(100vw - 72px) !important;
+    margin:20px auto 0 !important;
+    gap:8px !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile span{
+    width:100% !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    min-height:29px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    box-sizing:border-box !important;
+    padding:7px 15px !important;
+    border-radius:999px !important;
+    text-align:left !important;
+    white-space:nowrap !important;
+    line-height:1 !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile span:before{
+    width:6px !important;
+    height:6px !important;
+    flex:0 0 6px !important;
+    margin-right:10px !important;
+  }
+
+  /* Restore desktop visual order on mobile process map:
+     top row: 1,2,3,4
+     bottom row: 8,7,6,5
+  */
+  section#process .map-shell .map-grid,
+  #process .map-shell .map-grid,
+  .process .map-shell .map-grid{
+    display:grid !important;
+    grid-template-columns:repeat(4, minmax(0, 1fr)) !important;
+    grid-template-areas:
+      "s1 s2 s3 s4"
+      "s8 s7 s6 s5" !important;
+    gap:18px !important;
+  }
+
+  section#process .map-step,
+  #process .map-step,
+  .process .map-step{
+    grid-area:unset;
+  }
+
+  section#process .map-step.s1,
+  #process .map-step.s1,
+  .process .map-step.s1{grid-area:s1 !important;}
+
+  section#process .map-step.s2,
+  #process .map-step.s2,
+  .process .map-step.s2{grid-area:s2 !important;}
+
+  section#process .map-step.s3,
+  #process .map-step.s3,
+  .process .map-step.s3{grid-area:s3 !important;}
+
+  section#process .map-step.s4,
+  #process .map-step.s4,
+  .process .map-step.s4{grid-area:s4 !important;}
+
+  section#process .map-step.s8,
+  #process .map-step.s8,
+  .process .map-step.s8{grid-area:s8 !important;}
+
+  section#process .map-step.s7,
+  #process .map-step.s7,
+  .process .map-step.s7{grid-area:s7 !important;}
+
+  section#process .map-step.s6,
+  #process .map-step.s6,
+  .process .map-step.s6{grid-area:s6 !important;}
+
+  section#process .map-step.s5,
+  #process .map-step.s5,
+  .process .map-step.s5{grid-area:s5 !important;}
+}
+
+@media screen and (max-width:380px){
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    width:292px !important;
+    max-width:calc(100vw - 58px) !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile span{
+    font-size:10.5px !important;
+    padding-left:13px !important;
+    padding-right:13px !important;
+  }
+}
+
+
+/* ===== TRUE FIX: WHAT WE REVIEW FOOTER SINGLE LINE ===== */
+.audit-framework-footer{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:16px !important;
+  flex-wrap:nowrap !important;
+  white-space:nowrap !important;
+}
+
+.audit-framework-footer span,
+.audit-framework-footer strong{
+  display:inline-block !important;
+  white-space:nowrap !important;
+  flex-shrink:0 !important;
+}
+
+@media(max-width:820px){
+  .audit-framework-footer{
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:10px !important;
+    flex-wrap:nowrap !important;
+    white-space:nowrap !important;
+    text-align:center !important;
+  }
+
+  .audit-framework-footer span{
+    font-size:12.5px !important;
+  }
+
+  .audit-framework-footer strong{
+    font-size:10.5px !important;
+    letter-spacing:1.5px !important;
+  }
+}
+
+
+/* ===== FINAL MOBILE HERO PILL WIDTH REFINEMENT ===== */
+@media screen and (max-width:820px){
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    width:282px !important;
+    max-width:calc(100vw - 96px) !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile span{
+    width:100% !important;
+    max-width:100% !important;
+  }
+}
+
+@media screen and (max-width:380px){
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    width:270px !important;
+    max-width:calc(100vw - 72px) !important;
+  }
+}
+
+
+/* ===== FINAL MICRO POLISH: TIGHTER PILL STACK ===== */
+@media screen and (max-width:820px){
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    gap:6px !important;
+  }
+}
+
+@media screen and (max-width:430px){
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    gap:5px !important;
+  }
+}
+
 </style>
 </head>
 
@@ -5188,7 +6850,8 @@
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a class="btn btn-green" href="#contact">Request Billing Review</a>
+        <a href="#contact" class="btn btn-green">Request Billing Review</a>
+        
       </nav>
 
       <button class="mobile-toggle" aria-label="Open menu" id="mobileToggle">
@@ -5201,7 +6864,7 @@
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a class="mobile-cta" href="#contact">Request Billing Review</a>
+        
       </div>
     </div>
   </header>
@@ -5220,7 +6883,15 @@
         </h1>
 
         <div class="mobile-hero-summary">
-          We identify recoverable billing overcharges hidden in commercial utility accounts. <strong>No upfront cost.</strong> Historical recoveries may reach thousands.
+          We review past commercial utility bills for recoverable overcharges. <strong>No upfront cost.</strong>
+        </div>
+        <div class="mobile-hero-secondary-copy">
+          <span class="hero-recovery-line">Commercial accounts can recover thousands in historical overcharges, sometimes significantly more, after specialized review.</span>
+        </div>
+        <div class="hero-positioning-row hero-positioning-row-mobile">
+          <span>Not an energy supplier</span>
+          <span>Not a rate-switching pitch</span>
+          <span>We review past bills, not future rates</span>
         </div>
 
         <a href="#contact" class="btn btn-green mobile-hero-cta">See If You're Owed Money →</a>
@@ -5230,12 +6901,18 @@
     <div class="hero-redesign-copy">
       <span class="hero-redesign-kicker">Commercial Utility Audit & Recovery</span>
       <h1>You May Be Owed <em>Money</em> From Past Ameren Electric Bills</h1>
-      <p>We identify recoverable billing overcharges hidden in commercial utility accounts. No upfront cost.</p>
-      <div class="hero-redesign-line"></div>
-      <p class="hero-redesign-proof">Some commercial accounts recover thousands in historical overcharges after specialized review.</p>
+      <p class="hero-primary-copy">We review past commercial utility bills for recoverable overcharges. <strong>No upfront cost.</strong></p>
+      <p class="hero-secondary-copy"><span class="hero-recovery-line">Commercial accounts can recover thousands in historical overcharges, sometimes significantly more, after specialized review.</span></p>
+
+      <div class="hero-trust-bar" aria-label="What makes this review different">
+        <span>Not an energy supplier</span>
+        <span>Not a rate-switching pitch</span>
+        <span>We review past bills, not future rates</span>
+      </div>
+
       <div class="mobile-proof-card">
         <strong>No upfront cost.</strong>
-        Some commercial accounts recover thousands in historical overcharges after specialized review.
+        We work entirely on contingency. No recovery means no fee.
       </div>
       <div class="hero-redesign-actions">
         <a href="#contact" class="btn btn-green">See If You're Owed Money →</a>
@@ -5250,9 +6927,9 @@
 <section id="issues" class="overcharge audit-framework-section">
       <div class="wrap overcharge-grid audit-framework-grid">
         <div class="overcharge-copy audit-framework-copy">
-          <span class="section-label">Why overcharges happen</span>
-          <h2>Complex utility billing can hide recoverable overcharges for years.</h2>
-          <p>Ameren commercial electric accounts are shaped by layered tariffs, rate classifications, demand calculations, usage patterns, and account history. Most businesses have no practical way to know whether the billing structure is correct.</p>
+          <span class="section-label">Why billing errors happen</span>
+          <h2>Complex commercial billing structures can hide overcharges for years.</h2>
+          <p>Commercial Ameren billing structures involve layered tariffs, classifications, demand calculations, riders, usage patterns, and account history. Errors and misclassifications can persist unnoticed for years. Most businesses reasonably assume the original billing structure was correct and never independently reviewed.</p>
         </div>
 
         <div class="audit-framework-panel">
@@ -5260,7 +6937,7 @@
             <div class="audit-icon">⌕</div>
             <div>
               <h3>What we review</h3>
-              <p>We analyze the key billing factors that can reveal overcharges that may be recoverable.</p>
+              <p>We analyze billing structures and historical records from the previous 36 months that can hide recoverable overcharges.</p>
             </div>
           </div>
 
@@ -5270,7 +6947,7 @@
               <div class="audit-symbol">▤</div>
               <div>
                 <h4>Rate classifications</h4>
-                <p>We review whether the account appears to be billed under the correct commercial rate structure.</p>
+                <p>Reviewing whether the account appears to be billed under the correct commercial rate structure.</p>
               </div>
             </article>
 
@@ -5279,7 +6956,7 @@
               <div class="audit-symbol">↗</div>
               <div>
                 <h4>Demand charges</h4>
-                <p>We analyze demand calculations and billing patterns that can materially affect commercial electric costs.</p>
+                <p>Analyzing demand calculations and billing behavior that may materially impact cost.</p>
               </div>
             </article>
 
@@ -5288,7 +6965,7 @@
               <div class="audit-symbol">⌁</div>
               <div>
                 <h4>Usage patterns</h4>
-                <p>We compare historical usage against account setup and billing behavior to identify inconsistencies.</p>
+                <p>Comparing historical usage against account setup and billing structure.</p>
               </div>
             </article>
 
@@ -5297,14 +6974,14 @@
               <div class="audit-symbol">⚖</div>
               <div>
                 <h4>Billing rules</h4>
-                <p>We review tariffs, riders, and account structures to determine whether rules may have been misapplied.</p>
+                <p>Reviewing tariff schedules, riders, and billing rules for potential misapplication.</p>
               </div>
             </article>
           </div>
 
           <div class="audit-framework-footer">
             <span>Comprehensive review.</span>
-            <strong>No recovery. No fee.</strong>
+            <strong>NO RECOVERY. NO COST.</strong>
           </div>
         </div>
       </div>
@@ -5315,7 +6992,7 @@
         <div class="section-head">
           <span class="section-label">Recovery process</span>
           <h2>How the recovery process works.</h2>
-          <p>We manage the entire recovery process. You don’t have to lift a finger.</p>
+          <p>We manage the entire process. You don’t have to lift a finger.</p>
         </div>
         <div class="mobile-map-preview" aria-label="Recovery process map preview">
           <button class="mobile-map-thumb" type="button" id="openMapModal" aria-label="Open full recovery process map">
@@ -5344,10 +7021,20 @@
                 <stop offset="100%" stop-color="#27B98A"/>
               </linearGradient>
             </defs>
-            <path class="route-glow" d="M115 155 C250 95, 360 95, 485 155 S720 215, 850 155 S1045 115, 1010 260 C975 410, 805 430, 690 395 S475 345, 355 405 S160 475, 115 360" />
-            <path class="route-base" d="M115 155 C250 95, 360 95, 485 155 S720 215, 850 155 S1045 115, 1010 260 C975 410, 805 430, 690 395 S475 345, 355 405 S160 475, 115 360" />
-            <path class="route-main" d="M115 155 C250 95, 360 95, 485 155 S720 215, 850 155 S1045 115, 1010 260 C975 410, 805 430, 690 395 S475 345, 355 405 S160 475, 115 360" />
+            <path class="route-glow" d="M 58 188 C 150 178, 255 168, 360 186 C 445 201, 520 226, 610 202 C 710 176, 810 148, 990 198 C 1060 218, 1082 270, 1042 316 C 1010 354, 955 360, 900 358 C 810 356, 735 342, 665 350 C 575 360, 525 390, 440 382 C 350 374, 300 350, 220 356 C 145 362, 82 382, 58 400 C 42 412, 42 432, 60 444" />
+            <path class="route-base" d="M 58 188 C 150 178, 255 168, 360 186 C 445 201, 520 226, 610 202 C 710 176, 810 148, 990 198 C 1060 218, 1082 270, 1042 316 C 1010 354, 955 360, 900 358 C 810 356, 735 342, 665 350 C 575 360, 525 390, 440 382 C 350 374, 300 350, 220 356 C 145 362, 82 382, 58 400 C 42 412, 42 432, 60 444" />
+            <path class="route-main" d="M 58 188 C 150 178, 255 168, 360 186 C 445 201, 520 226, 610 202 C 710 176, 810 148, 990 198 C 1060 218, 1082 270, 1042 316 C 1010 354, 955 360, 900 358 C 810 356, 735 342, 665 350 C 575 360, 525 390, 440 382 C 350 374, 300 350, 220 356 C 145 362, 82 382, 58 400 C 42 412, 42 432, 60 444" />
           </svg>
+          <svg class="mobile-route-svg" viewBox="0 0 1120 600" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="mobileRouteGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1D9E75"/>
+                <stop offset="100%" stop-color="#27B98A"/>
+              </linearGradient>
+            </defs>
+            <path class="mobile-route-main" d="M 58 188 C 150 178, 255 168, 360 186 C 445 201, 520 226, 610 202 C 710 176, 810 148, 990 198 C 1060 218, 1082 270, 1042 316 C 1010 354, 955 360, 900 358 C 810 356, 735 342, 665 350 C 575 360, 525 390, 440 382 C 350 374, 300 350, 220 356 C 145 362, 82 382, 58 400 C 42 412, 42 432, 60 444" />
+          </svg>
+
 
           <div class="map-grid">
             <article class="map-step current s1">
@@ -5403,7 +7090,7 @@
             <article class="map-step payoff s8">
               <div class="step-top"><div class="map-num">8</div><div class="map-icon">$</div></div>
               <h3>You Get Paid</h3>
-              <p>If a refund is recovered, the funds are returned to the client. Our compensation is paid from the recovery, not out of pocket.</p>
+              <p>If funds are recovered, our fee comes only from recovered funds, not out of pocket.</p>
             </article>
           </div>
 
@@ -5420,14 +7107,14 @@
       <div class="wrap">
         <div class="pricing-layout">
           <div class="pricing-copy">
-            <span class="section-label">Contingency-based. Results-driven.</span>
-            <h2>No upfront cost. No risk. Ever.</h2>
-            <p>We only get paid when you do. Our fee is 50% of whatever we recover — money that didn't exist for you before we found it. If we find nothing, you owe us nothing.</p>
+            <span class="section-label">Contingency-based recovery</span>
+            <h2>No upfront cost. No recovery, no fee.</h2>
+            <p>We only get paid when you do. Our fee is 50% of whatever we recover, money that didn't exist for you before we found it. If we find nothing, you owe us nothing.</p>
             <ul class="pricing-checks">
               <li>You pay nothing upfront</li>
               <li>We handle everything — time, effort, and all recovery costs</li>
               <li>You keep 50% of every recovery</li>
-              <li>No recovery means no charge — ever</li>
+              <li>No recovery means no charge, ever</li>
             </ul>
           </div>
 
@@ -5437,13 +7124,13 @@
 
             <div class="breakdown-table">
               <div class="breakdown-row"><span>Monthly Electric Spend</span><strong>$5,000</strong></div>
-              <div class="breakdown-row"><span>Total Spend Over 36 Months</span><strong>$180,000</strong></div>
+              <div class="breakdown-row"><span>Total Spent Over Previous 36 Months</span><strong>$180,000</strong></div>
               <div class="breakdown-row"><span>Potential Refund Identified at 10%</span><strong>$18,000</strong></div>
               <div class="breakdown-row keep client-focus"><span>Your Share</span><strong>$9,000</strong></div>
-              <div class="breakdown-row"><span>Our fee — paid only from the recovery</span><strong>$9,000</strong></div>
+              <div class="breakdown-row"><span>Recovery Management Fee</span><strong>$9,000</strong></div>
               <div class="breakdown-row upfront"><span>Upfront Cost to You</span><strong>$0</strong></div>
             </div>
-            <p class="example-disclaimer">Our fee is 50% of recovered funds — money that wouldn't have existed for you without this audit. This is an example only. Actual results vary based on each account, billing history, utility rules, and the type of error identified.</p>
+            <p class="example-disclaimer">*This is an example only. Actual results vary based on each account, billing history, utility rules, and the type of error identified.</p>
           </div>
         </div>
       </div>
@@ -5453,14 +7140,20 @@
       <div class="wrap">
         <div class="section-head"><span class="section-label">FAQ</span><h2>Common questions.</h2></div>
         <div class="faq-list">
+          <details><summary>Is this about switching suppliers or lowering future rates?</summary><p>No. We are not an energy supplier and this is not a rate-switching pitch. Our review is backward-looking and focused on identifying recoverable billing errors from prior Ameren billing cycles, looking back up to 36 months.</p></details>
           <details><summary>Do I need old bills?</summary><p>No. With a simple authorization form, we request billing records directly from Ameren. You do not have to find or sift through any old billing records.</p></details>
           <details><summary>How long does the process take?</summary><p>The audit itself typically takes approximately 2 to 5 weeks. After the audit is completed, the overall timeline becomes dependent on Ameren’s internal review and recovery process, as well as the complexity of the specific billing issues identified.</p></details>
           <details><summary>What types of accounts qualify?</summary><p>Commercial and industrial accounts with meaningful historical billing activity are typically the best fit.</p></details>
           <details><summary>Why wouldn’t businesses already know about this?</summary><p>Commercial utility billing structures can be highly technical and may remain unchanged for years unless independently reviewed. Many businesses reasonably assume the original account setup, classifications, and billing structures were correct.</p></details>
-          <details><summary>Can we sign an NDA?</summary><p>Yes. We sign an NDA with every client.</p></details>
-          <details><summary>Is there any upfront cost?</summary><p>None. You never pay anything out of pocket. If recovery funds are identified, our fee comes out of the recovery itself. We are entirely contingency-based.</p></details>
-          <details><summary>What happens if nothing is found?</summary><p>There is no fee. You gained certainty — without spending time, effort, or money.</p></details>
-        </div>
+          <details><summary>Can we sign an NDA?</summary><p>Yes. We’re happy to sign an NDA upon request.</p></details>
+          <details><summary>Is there any upfront cost?</summary><p>None. You never pay anything upfront or out of pocket. We are paid only from successfully recovered funds.</p></details>
+          <details><summary>What happens if nothing is found?</summary><p>There is no fee. You gained certainty without spending time, effort, or money.</p></details>
+        
+        <details>
+          <summary>What if the utility issues a credit instead of a refund check?</summary>
+          <p>Some recoveries may be issued as account credits rather than direct checks. In those cases, payment arrangements are structured from the recovered funds. If nothing is recovered, nothing is owed.</p>
+        </details>
+</div>
       </div>
     </section>
 
@@ -5469,11 +7162,11 @@
         <div class="contact-copy">
           <span class="section-label">Request review</span>
           <h2>See if your commercial account may qualify.</h2>
-          <p>Send us basic account information and we’ll reach out to schedule a quick conversation to see whether your account is a fit for review.</p>
-          <div class="contact-note">No upfront cost. No old bills required to begin.</div>
+          <p>Send us basic account information and we’ll reach out to schedule a quick conversation to see whether your account may be a fit for a refund audit.</p>
+          <div class="contact-note">No upfront cost. No billing research required. Not an energy supplier or rate-switching pitch.</div>
         <div class="contact-phone-card">
           <span>Call or Text</span>
-          <a href="tel:13142718777">(314) 271-8777</a>
+          <a href="tel:13142718777"><span class="contact-phone-number">(314) 271-8777</span></a>
         </div>
 
         </div>
@@ -5492,17 +7185,14 @@
             <div class="field"><label for="monthly_bill">Estimated Monthly Electric Bill</label><input id="monthly_bill" name="monthly_bill" type="text" placeholder="$1,000–$5,000, $5,000+, not sure, etc." /></div>
           </div>
           <div class="field"><label for="message">Anything helpful to know?</label><textarea id="message" name="message" placeholder="Number of locations, multiple meters, recent expansion, unusually high bills, or account questions."></textarea></div>
-          <button class="btn btn-green" type="submit">Request Billing Review →</button>
+          
           <p class="privacy">Submitting this form does not create any obligation. Review begins only with authorization.</p>
-        </form>
+        
+      <div class="form-submit-wrap">
+        <button type="submit" class="btn btn-green">Request Billing Review</button>
       </div>
-    </section>
-
-    <section class="final-cta">
-      <div class="wrap">
-        <h2>We handle the process. You keep the recovery.</h2>
-        <p>Find out whether your business may be leaving money behind.</p>
-        <a class="btn btn-green" href="#contact">Request Billing Review →</a>
+    
+</form>
       </div>
     </section>
   </main>
@@ -5510,7 +7200,7 @@
   <footer>
     <div class="wrap footer-flex">
       <div>© ElectricBillRefund. Utility Audit & Recovery.</div>
-      <div>No recovery, no fee. Commercial utility billing review.</div>
+      <div>Not an energy supplier. Not a rate-switching pitch. No recovery, no fee.</div>
     </div>
   </footer>
 
@@ -5592,6 +7282,26 @@
   window.addEventListener('resize', finishLineFitMap);
   window.addEventListener('orientationchange', function(){setTimeout(finishLineFitMap,150);});
   document.addEventListener('DOMContentLoaded', finishLineFitMap);
+})();
+</script>
+
+
+<script>
+(function(){
+  var desktopRoute = "M115 155 C250 95, 360 95, 485 155 S720 215, 850 155 S1045 115, 1010 260 C975 410, 805 430, 690 395 S475 345, 355 405 S160 475, 115 360";
+  var mobileRoute = "M115 155 C250 95, 360 95, 485 155 S720 215, 850 155 S1045 115, 1010 260 C975 410, 805 430, 690 395 S505 390, 360 405 S245 405, 115 405";
+  function refineProcessPath(){
+    var isMobile = window.matchMedia("(max-width: 820px)").matches;
+    document.querySelectorAll(".route-main, .route-base, .route-glow").forEach(function(path){
+      path.setAttribute("d", isMobile ? mobileRoute : desktopRoute);
+    });
+  }
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", refineProcessPath);
+  } else {
+    refineProcessPath();
+  }
+  window.addEventListener("resize", refineProcessPath);
 })();
 </script>
 
