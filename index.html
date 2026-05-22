@@ -6834,6 +6834,7 @@ section.hero.hero-redesign .hero-trust-bar{
   }
 }
 
+  .required-star{color:#d92d20;font-weight:900;margin-left:3px;}
 </style>
 </head>
 
@@ -7175,12 +7176,12 @@ section.hero.hero-redesign .hero-trust-bar{
           <input type="hidden" name="_subject" value="New ElectricBillRefund review request" />
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="form-row">
-            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
-            <div class="field"><label for="company">Company Name</label><input id="company" name="company" type="text" autocomplete="organization" required /></div>
+            <div class="field"><label for="name">Name <span class="required-star">*</span></label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+            <div class="field"><label for="company">Company Name <span class="required-star">*</span></label><input id="company" name="company" type="text" autocomplete="organization" required /></div>
           </div>
           <div class="form-row">
-            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
-            <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+            <div class="field"><label for="email">Email <span class="required-star">*</span></label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+            <div class="field"><label for="phone">Phone <span class="required-star">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div>
           </div>
           <div class="form-row">
             <div class="field"><label for="business_type">Type of Business</label><input id="business_type" name="business_type" type="text" placeholder="Restaurant, warehouse, retail, office, etc." /></div>
