@@ -7189,7 +7189,7 @@ section.hero.hero-redesign .hero-trust-bar{
           <div class="field"><label for="message">Anything helpful to know?</label><textarea id="message" name="message" placeholder="Number of locations, multiple meters, recent expansion, unusually high bills, or account questions."></textarea></div>
           
           <p class="privacy">Submitting this form does not create any obligation. Review begins only with authorization.</p>
-          <div id="ebrFormStatus" role="status" aria-live="polite" style="display:none;margin-top:14px;padding:14px 16px;border-radius:12px;background:#EAF7F2;color:#0F2A44;font-weight:800;font-size:14px;line-height:1.5;text-align:center;">Thank you. Someone from Electrical Bill Refund will contact you soon.</div>
+          <div id="ebrFormStatus" role="status" aria-live="polite" style="display:none;margin-top:14px;padding:14px 16px;border-radius:12px;background:#EAF7F2;color:#0F2A44;font-weight:800;font-size:14px;line-height:1.5;text-align:center;"><strong>Thank you.</strong><br>Someone from Electrical Bill Refund will contact you soon.</div>
         
       <div class="form-submit-wrap">
         <button type="submit" class="btn btn-green">Request Billing Review</button>
@@ -7215,7 +7215,7 @@ section.hero.hero-redesign .hero-trust-bar{
 
   var status = document.getElementById('ebrFormStatus');
   var button = form.querySelector('button[type="submit"]');
-  var successMessage = 'Thank you. Someone from Electrical Bill Refund will contact you soon.';
+  var successMessage = '<strong>Thank you.</strong><br>Someone from Electrical Bill Refund will contact you soon.';
 
   form.addEventListener('submit', function(event){
     event.preventDefault();
@@ -7235,7 +7235,7 @@ section.hero.hero-redesign .hero-trust-bar{
       if (response.ok) {
         form.reset();
         if (status) {
-          status.textContent = successMessage;
+          status.innerHTML = successMessage;
           status.style.display = 'block';
           status.style.background = '#EAF7F2';
           status.style.color = '#0F2A44';
