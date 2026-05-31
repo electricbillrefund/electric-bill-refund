@@ -6835,6 +6835,330 @@ section.hero.hero-redesign .hero-trust-bar{
 }
 
   .required-star{color:#d92d20;font-weight:900;margin-left:3px;}
+
+
+/* ===== DESKTOP HERO VIEWPORT FIT FIX =====
+   Keeps the primary CTA buttons visible on normal desktop/laptop screens.
+   Mobile rules above remain unchanged. */
+@media screen and (min-width:769px){
+  section.hero.hero-redesign{
+    min-height:calc(100vh - 74px) !important;
+    padding:34px 0 44px !important;
+    align-items:center !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-inner{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-kicker{
+    margin-bottom:18px !important;
+  }
+
+  section.hero.hero-redesign h1{
+    font-size:clamp(52px,5.5vw,76px) !important;
+    line-height:.96 !important;
+    margin-bottom:20px !important;
+    max-width:820px !important;
+  }
+
+  section.hero.hero-redesign .hero-primary-copy{
+    font-size:20px !important;
+    line-height:1.5 !important;
+    margin-bottom:0 !important;
+  }
+
+  section.hero.hero-redesign .hero-secondary-copy{
+    font-size:17px !important;
+    line-height:1.55 !important;
+    margin-top:18px !important;
+  }
+
+  section.hero.hero-redesign .hero-trust-bar{
+    margin-top:22px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-actions{
+    margin-top:24px !important;
+  }
+}
+
+/* Extra tightening for shorter laptop browser windows */
+@media screen and (min-width:769px) and (max-height:780px){
+  section.hero.hero-redesign{
+    padding:20px 0 30px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-kicker{
+    margin-bottom:12px !important;
+    font-size:11px !important;
+    letter-spacing:2.4px !important;
+  }
+
+  section.hero.hero-redesign h1{
+    font-size:clamp(48px,5.1vw,68px) !important;
+    line-height:.95 !important;
+    margin-bottom:16px !important;
+  }
+
+  section.hero.hero-redesign .hero-primary-copy{
+    font-size:18px !important;
+    line-height:1.45 !important;
+  }
+
+  section.hero.hero-redesign .hero-secondary-copy{
+    font-size:15.5px !important;
+    line-height:1.45 !important;
+    margin-top:12px !important;
+  }
+
+  section.hero.hero-redesign .hero-trust-bar{
+    margin-top:16px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-actions{
+    margin-top:18px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-actions .btn{
+    padding:15px 26px !important;
+  }
+}
+
+
+/* ===== DESKTOP HERO FINAL BALANCE — BIGGER, STILL ABOVE THE FOLD =====
+   Restores premium headline scale while keeping CTA buttons visible on laptop/desktop screens. */
+@media screen and (min-width:821px){
+  section.hero.hero-redesign{
+    min-height:calc(100vh - 74px) !important;
+    padding:86px 0 42px !important;
+    align-items:flex-start !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-inner{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-kicker{
+    margin-bottom:20px !important;
+  }
+
+  section.hero.hero-redesign h1{
+    font-size:clamp(62px,6.15vw,86px) !important;
+    line-height:.96 !important;
+    letter-spacing:-1.35px !important;
+    max-width:900px !important;
+    margin-bottom:24px !important;
+  }
+
+  section.hero.hero-redesign .hero-primary-copy{
+    max-width:780px !important;
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+    font-size:22px !important;
+    line-height:1.45 !important;
+    color:rgba(255,255,255,.75) !important;
+  }
+
+  section.hero.hero-redesign .hero-primary-copy strong{
+    display:block !important;
+    margin-top:5px !important;
+    color:#fff !important;
+    font-weight:900 !important;
+  }
+
+  section.hero.hero-redesign .hero-secondary-copy{
+    max-width:780px !important;
+    margin-top:20px !important;
+    margin-bottom:0 !important;
+    font-size:18.5px !important;
+    line-height:1.52 !important;
+    color:rgba(255,255,255,.56) !important;
+  }
+
+  section.hero.hero-redesign .hero-trust-bar{
+    margin-top:24px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-actions{
+    margin-top:28px !important;
+  }
+}
+
+/* Short laptop windows: keep the same visual hierarchy, just tighten spacing enough for the CTA. */
+@media screen and (min-width:821px) and (max-height:780px){
+  section.hero.hero-redesign{
+    padding:62px 0 30px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-kicker{
+    margin-bottom:16px !important;
+    font-size:11.5px !important;
+    letter-spacing:2.5px !important;
+  }
+
+  section.hero.hero-redesign h1{
+    font-size:clamp(58px,5.85vw,80px) !important;
+    line-height:.95 !important;
+    margin-bottom:20px !important;
+  }
+
+  section.hero.hero-redesign .hero-primary-copy{
+    font-size:20.5px !important;
+    line-height:1.42 !important;
+  }
+
+  section.hero.hero-redesign .hero-secondary-copy{
+    font-size:17px !important;
+    line-height:1.45 !important;
+    margin-top:16px !important;
+  }
+
+  section.hero.hero-redesign .hero-trust-bar{
+    margin-top:20px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-actions{
+    margin-top:22px !important;
+  }
+
+  section.hero.hero-redesign .hero-redesign-actions .btn{
+    padding:16px 28px !important;
+  }
+}
+
+
+
+/* ===== FINAL MOBILE CTA LIFT — 2026-05-31 ===== */
+/* Mobile only: pulls the hero CTA up without changing desktop. */
+@media screen and (max-width:820px){
+  section.hero.hero-redesign .hero-positioning-row-mobile,
+  .hero-proof-pills,
+  .hero-pill-row,
+  .proof-pills{
+    margin-top:14px !important;
+    gap:7px !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile span,
+  .hero-proof-pills span,
+  .hero-pill-row span,
+  .proof-pills span{
+    min-height:27px !important;
+    padding-top:6px !important;
+    padding-bottom:6px !important;
+  }
+
+  .hero-actions,
+  section.hero.hero-redesign .hero-actions,
+  section.hero.hero-redesign .hero-redesign-actions{
+    margin-top:18px !important;
+    gap:12px !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .btn-green,
+  section.hero.hero-redesign .hero-actions .btn-green,
+  section.hero.hero-redesign .hero-redesign-actions .btn-green,
+  section.hero.hero-redesign a.mobile-hero-cta{
+    min-height:52px !important;
+    height:auto !important;
+  }
+}
+
+@media screen and (max-width:430px){
+  section.hero.hero-redesign .hero-positioning-row-mobile,
+  .hero-proof-pills,
+  .hero-pill-row,
+  .proof-pills{
+    margin-top:13px !important;
+    gap:7px !important;
+  }
+
+  .hero-actions,
+  section.hero.hero-redesign .hero-actions,
+  section.hero.hero-redesign .hero-redesign-actions{
+    margin-top:16px !important;
+    gap:12px !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .btn-green,
+  section.hero.hero-redesign .hero-actions .btn-green,
+  section.hero.hero-redesign .hero-redesign-actions .btn-green,
+  section.hero.hero-redesign a.mobile-hero-cta{
+    min-height:52px !important;
+  }
+}
+
+
+
+/* ===== FINAL MOBILE HERO SPACING — 2026-05-31 =====
+   Mobile only: more breathing room above the reassurance pills,
+   much less space between the final pill and the CTA button. */
+@media screen and (max-width:820px){
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    margin-top:26px !important;
+    gap:8px !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-cta,
+  section.hero.hero-redesign .mobile-hero-10 > a.btn.btn-green.mobile-hero-cta,
+  section.hero.hero-redesign .mobile-hero-10 > a.mobile-hero-cta,
+  a.btn.btn-green.mobile-hero-cta{
+    margin-top:20px !important;
+  }
+}
+
+@media screen and (max-width:430px){
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    margin-top:25px !important;
+    gap:8px !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-cta,
+  section.hero.hero-redesign .mobile-hero-10 > a.btn.btn-green.mobile-hero-cta,
+  section.hero.hero-redesign .mobile-hero-10 > a.mobile-hero-cta,
+  a.btn.btn-green.mobile-hero-cta{
+    margin-top:18px !important;
+  }
+}
+
+
+
+/* ===== FINAL MOBILE HERO EQUAL SPACING — 2026-05-31 =====
+   Mobile only: centers reassurance pills between the recovery line and CTA. */
+@media screen and (max-width:820px){
+  section.hero.hero-redesign .mobile-hero-secondary-copy{
+    margin-bottom:0 !important;
+  }
+
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    margin-top:30px !important;
+    gap:8px !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-10 > a.btn.btn-green.mobile-hero-cta,
+  section.hero.hero-redesign .mobile-hero-10 > a.mobile-hero-cta,
+  a.btn.btn-green.mobile-hero-cta{
+    margin-top:30px !important;
+  }
+}
+
+@media screen and (max-width:430px){
+  section.hero.hero-redesign .hero-positioning-row-mobile{
+    margin-top:28px !important;
+    gap:8px !important;
+  }
+
+  section.hero.hero-redesign .mobile-hero-10 > a.btn.btn-green.mobile-hero-cta,
+  section.hero.hero-redesign .mobile-hero-10 > a.mobile-hero-cta,
+  a.btn.btn-green.mobile-hero-cta{
+    margin-top:28px !important;
+  }
+}
 </style>
 </head>
 
@@ -6884,7 +7208,7 @@ section.hero.hero-redesign .hero-trust-bar{
         </h1>
 
         <div class="mobile-hero-summary">
-          We review past commercial utility bills for recoverable overcharges. <strong>No upfront cost.</strong>
+          We review past commercial utility bills for recoverable overcharges.<br><strong>No upfront cost.</strong>
         </div>
         <div class="mobile-hero-secondary-copy">
           <span class="hero-recovery-line">Commercial accounts can recover thousands in historical overcharges, sometimes significantly more, after specialized review.</span>
@@ -6902,7 +7226,7 @@ section.hero.hero-redesign .hero-trust-bar{
     <div class="hero-redesign-copy">
       <span class="hero-redesign-kicker">Commercial Utility Audit & Recovery</span>
       <h1>You May Be Owed <em>Money</em> From Past Ameren Electric Bills</h1>
-      <p class="hero-primary-copy">We review past commercial utility bills for recoverable overcharges. <strong>No upfront cost.</strong></p>
+      <p class="hero-primary-copy">We review past commercial utility bills for recoverable overcharges.<br><strong>No upfront cost.</strong></p>
       <p class="hero-secondary-copy"><span class="hero-recovery-line">Commercial accounts can recover thousands in historical overcharges, sometimes significantly more, after specialized review.</span></p>
 
       <div class="hero-trust-bar" aria-label="What makes this review different">
