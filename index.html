@@ -7710,6 +7710,7 @@ section.hero.hero-redesign .hero-trust-bar{
 </script>
 
 
+
 <script>
 /* EBR Analytics Event Tracking */
 (function(){
@@ -7732,9 +7733,52 @@ section.hero.hero-redesign .hero-trust-bar{
     var text = cleanText(link.textContent);
     var href = link.getAttribute('href') || '';
     var hrefLower = href.toLowerCase();
+    var inHeader = !!link.closest('header');
+    var inMobileMenu = !!link.closest('.mobile-menu');
 
-    // Header CTA: top navigation "Request Billing Review"
-    if (link.closest('header') && href === '#contact' && /request billing review/i.test(text)) {
+    // Header navigation clicks: desktop and mobile
+    if ((inHeader || inMobileMenu) && href === '#issues') {
+      sendEvent('header_why_overcharges_click', {
+        event_label: 'header_why_overcharges_happen',
+        link_text: text
+      });
+      return;
+    }
+
+    if ((inHeader || inMobileMenu) && href === '#process') {
+      sendEvent('header_recovery_process_click', {
+        event_label: 'header_recovery_process',
+        link_text: text
+      });
+      return;
+    }
+
+    if ((inHeader || inMobileMenu) && href === '#pricing') {
+      sendEvent('header_pricing_click', {
+        event_label: 'header_pricing',
+        link_text: text
+      });
+      return;
+    }
+
+    if ((inHeader || inMobileMenu) && href === '#faq') {
+      sendEvent('header_faq_click', {
+        event_label: 'header_faq',
+        link_text: text
+      });
+      return;
+    }
+
+    if ((inHeader || inMobileMenu) && href === '#contact' && /^contact$/i.test(text)) {
+      sendEvent('header_contact_click', {
+        event_label: 'header_contact',
+        link_text: text
+      });
+      return;
+    }
+
+    // Header CTA: "Request Billing Review"
+    if ((inHeader || inMobileMenu) && href === '#contact' && /request billing review/i.test(text)) {
       sendEvent('request_review_click', {
         event_label: 'header_request_billing_review',
         link_text: text
