@@ -7568,6 +7568,14 @@ section.hero.hero-redesign .hero-trust-bar{
       headers: { 'Accept': 'application/json' }
     }).then(function(response){
       if (response.ok) {
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            event_category: 'lead',
+            event_label: 'billing_review_form',
+            form_id: 'ebrContactForm'
+          });
+        }
+
         form.reset();
         if (status) {
           status.innerHTML = successMessage;
@@ -7698,6 +7706,100 @@ section.hero.hero-redesign .hero-trust-bar{
     refineProcessPath();
   }
   window.addEventListener("resize", refineProcessPath);
+})();
+</script>
+
+
+<script>
+/* EBR Analytics Event Tracking */
+(function(){
+  function sendEvent(eventName, params){
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, Object.assign({
+        event_category: 'engagement'
+      }, params || {}));
+    }
+  }
+
+  function cleanText(text){
+    return (text || '').replace(/\s+/g, ' ').trim();
+  }
+
+  document.addEventListener('click', function(event){
+    var link = event.target.closest('a');
+    if (!link) return;
+
+    var text = cleanText(link.textContent);
+    var href = link.getAttribute('href') || '';
+    var hrefLower = href.toLowerCase();
+
+    // Header CTA: top navigation "Request Billing Review"
+    if (link.closest('header') && href === '#contact' && /request billing review/i.test(text)) {
+      sendEvent('request_review_click', {
+        event_label: 'header_request_billing_review',
+        link_text: text
+      });
+      return;
+    }
+
+    // Home page CTA: "See If You're Owed Money"
+    if (href === '#contact' && /see if you'?re owed money/i.test(text)) {
+      sendEvent('hero_cta_click', {
+        event_label: 'see_if_you_are_owed_money',
+        link_text: text
+      });
+      return;
+    }
+
+    // Home page process CTA: "How It Works" / "See how it works"
+    if (href === '#process' && (/how it works/i.test(text) || /see how it works/i.test(text))) {
+      sendEvent('how_it_works_click', {
+        event_label: 'home_how_it_works',
+        link_text: text
+      });
+      return;
+    }
+
+    // Recovery Process PDF links
+    if (/ameren billing authorization\.pdf/i.test(hrefLower) || /view authorization/i.test(text)) {
+      sendEvent('authorization_view', {
+        event_label: 'ameren_billing_authorization',
+        file_name: 'Ameren Billing Authorization.pdf',
+        link_url: href
+      });
+      return;
+    }
+
+    if (/ebr utility questionnaire\.pdf/i.test(hrefLower) || /view questionnaire/i.test(text)) {
+      sendEvent('questionnaire_view', {
+        event_label: 'ebr_utility_questionnaire',
+        file_name: 'EBR Utility Questionnaire.pdf',
+        link_url: href
+      });
+      return;
+    }
+
+    // Phone click
+    if (hrefLower.indexOf('tel:') === 0) {
+      sendEvent('phone_click', {
+        event_label: '314-271-8777',
+        link_url: href
+      });
+      return;
+    }
+  });
+
+  // FAQ opens: one event whenever a question is opened.
+  document.querySelectorAll('#faq details').forEach(function(detail){
+    detail.addEventListener('toggle', function(){
+      if (!detail.open) return;
+      var summary = detail.querySelector('summary');
+      sendEvent('faq_open', {
+        event_label: cleanText(summary ? summary.textContent : 'FAQ question'),
+        question_name: cleanText(summary ? summary.textContent : 'FAQ question')
+      });
+    });
+  });
 })();
 </script>
 
