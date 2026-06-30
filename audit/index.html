@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Electric Bill Refund — Account Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0e2a47; --navy-700:#143b63; --ink:#16202b;
+    --green:#2e9e5b; --green-600:#23854a;
+    --mist:#eef2f6; --card:#ffffff; --line:#e2e8f0; --muted:#5f6b78;
+    --radius:14px; --shadow:0 10px 40px rgba(14,42,71,.10);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    font-family:Inter,system-ui,sans-serif; color:var(--ink);
+    background:
+      radial-gradient(1200px 500px at 100% -10%, rgba(46,158,91,.10), transparent 60%),
+      radial-gradient(1000px 500px at -10% 110%, rgba(14,42,71,.10), transparent 60%),
+      var(--mist);
+    min-height:100vh; padding:32px 18px 80px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px; margin:0 auto}
+  .brand{display:flex; align-items:center; gap:12px; margin:4px 2px 22px}
+  .mark{width:34px; height:34px; border-radius:50%;
+    background:conic-gradient(from 200deg, var(--green), var(--navy) 70%); position:relative; flex:0 0 auto}
+  .mark::after{content:""; position:absolute; inset:7px; background:var(--mist); border-radius:50%}
+  .wordmark{font-weight:800; letter-spacing:-.02em; font-size:19px; color:var(--navy)}
+  .wordmark span{font-weight:500; color:var(--navy-700)}
+  .tag{font-size:10px; letter-spacing:.22em; color:var(--muted); text-transform:uppercase; margin-top:2px}
+
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden}
+  .head{padding:26px 28px 0}
+  .eyebrow{display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--green-600)}
+  .step-name{margin:6px 0 0; font-size:22px; font-weight:800; letter-spacing:-.02em; color:var(--navy)}
+  .step-sub{margin:7px 0 0; color:var(--muted); font-size:14.5px; line-height:1.5}
+  .body{padding:8px 28px 4px}
+
+  .progress{height:5px; background:#dfe6ee; border-radius:99px; margin:20px 28px 0; overflow:hidden}
+  .bar{height:100%; width:0; border-radius:99px; background:linear-gradient(90deg,var(--green),var(--navy-700)); transition:width .45s cubic-bezier(.4,0,.2,1)}
+  .count{font-size:12px; color:var(--muted); margin:8px 28px 0; font-weight:500}
+
+  .q{padding:18px 0; border-bottom:1px solid #eef2f6}
+  .q:last-child{border-bottom:none}
+  label.lab{display:block; font-weight:600; font-size:15.5px; color:var(--ink); margin-bottom:3px}
+  .req{color:var(--green-600); font-weight:700}
+  .hint{font-size:13px; color:var(--muted); margin:2px 0 11px; line-height:1.45}
+  input[type=text], input[type=email], input[type=tel], textarea, select{
+    width:100%; font:inherit; color:var(--ink); background:#fbfdff; border:1.5px solid var(--line);
+    border-radius:10px; padding:11px 13px; transition:border-color .15s, box-shadow .15s}
+  textarea{min-height:74px; resize:vertical}
+  input:focus, textarea:focus, select:focus{outline:none; border-color:var(--green); box-shadow:0 0 0 3px rgba(46,158,91,.16)}
+
+  .opts{display:flex; flex-direction:column; gap:9px; margin-top:4px}
+  .opts.grid{display:grid; grid-template-columns:1fr 1fr; gap:9px}
+  .opt{position:relative; display:flex; align-items:center; gap:11px; cursor:pointer; border:1.5px solid var(--line);
+    border-radius:11px; padding:11px 13px; background:#fbfdff; font-size:14.5px; transition:border-color .15s, background .15s}
+  .opt:hover{border-color:#bcd4c6}
+  .opt input{position:absolute; opacity:0; pointer-events:none}
+  .dot{width:19px; height:19px; border-radius:50%; border:2px solid #c4cfdb; flex:0 0 auto; transition:.15s}
+  .opt.box .dot{border-radius:6px}
+  .opt:has(input:checked){border-color:var(--green); background:rgba(46,158,91,.07)}
+  .opt:has(input:checked) .dot{border-color:var(--green); background:var(--green); box-shadow:inset 0 0 0 3px #fbfdff}
+  .opt:has(input:checked).box .dot{box-shadow:inset 0 0 0 3px var(--green); background:#fff}
+  .opt:focus-within{box-shadow:0 0 0 3px rgba(46,158,91,.16)}
+
+  .reveal{margin-top:11px}
+  .err{color:#c0392b; font-size:13px; margin-top:10px; display:none; font-weight:600}
+  .err.show{display:block}
+
+  /* account block */
+  .acct{border:1.5px solid var(--line); border-radius:12px; padding:4px 16px; margin:16px 0; background:#fcfdfe}
+  .acct-head{display:flex; align-items:center; justify-content:space-between; padding:14px 0 4px}
+  .acct-title{font-weight:800; color:var(--navy); font-size:16px; letter-spacing:-.01em}
+  .acct-remove{background:transparent; border:none; color:#c0392b; font-size:13px; font-weight:600; cursor:pointer; padding:4px 6px}
+  .acct-remove:hover{text-decoration:underline}
+
+  /* ending two-button choice */
+  .ending{margin:22px 0 6px}
+  .ending-q{font-weight:700; color:var(--navy); font-size:15.5px; margin-bottom:12px}
+  .ending-btns{display:flex; flex-direction:column; gap:11px}
+  .ebtn{display:flex; align-items:center; gap:12px; text-align:left; width:100%; cursor:pointer;
+    border-radius:12px; padding:15px 17px; font:inherit; font-size:15px; font-weight:700; transition:.15s}
+  .ebtn small{display:block; font-weight:500; font-size:13px; color:var(--muted); margin-top:2px}
+  .ebtn-add{background:#fff; border:1.5px dashed var(--green); color:var(--green-600)}
+  .ebtn-add:hover{background:rgba(46,158,91,.06)}
+  .ebtn-submit{background:var(--navy); border:1.5px solid var(--navy); color:#fff}
+  .ebtn-submit small{color:rgba(255,255,255,.75)}
+  .ebtn-submit:hover{background:var(--navy-700)}
+  .ebtn-submit:disabled{opacity:.6; cursor:default}
+  .eicon{font-size:18px; flex:0 0 auto}
+
+  .nav{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:18px 28px 26px}
+  button.next{background:var(--navy); color:#fff; border:none; padding:13px 26px; font-size:15px; font-weight:700; border-radius:11px; cursor:pointer; transition:.15s}
+  button.next:hover{background:var(--navy-700)}
+  button.back{background:transparent; color:var(--muted); border:none; padding:13px 8px; font-size:14.5px; font-weight:700; cursor:pointer}
+  button.back:hover{color:var(--ink)}
+  button.back[hidden]{visibility:hidden}
+  .nav[hidden]{display:none}
+
+  .done{text-align:center; padding:54px 30px 60px; display:none}
+  .done.show{display:block}
+  .check{width:64px; height:64px; border-radius:50%; margin:0 auto 18px; background:rgba(46,158,91,.12); display:grid; place-items:center}
+  .check svg{width:30px; height:30px}
+  .done h2{margin:0 0 8px; color:var(--navy); font-size:24px; font-weight:800; letter-spacing:-.02em}
+  .done p{margin:0 auto; color:var(--muted); max-width:440px; line-height:1.55; font-size:15px}
+  .foot{max-width:680px; margin:18px auto 0; text-align:center; font-size:12px; color:var(--muted)}
+  @media (max-width:560px){
+    .opts.grid{grid-template-columns:1fr}
+    .head,.body{padding-left:20px; padding-right:20px}
+    .nav,.count{padding-left:20px; padding-right:20px}
+    .progress{margin-left:20px;margin-right:20px}
+  }
+  .page-title{margin:0 2px 16px}
+  .page-title h1{margin:0; font-size:27px; font-weight:800; letter-spacing:-.025em; color:var(--navy)}
+  .page-title p{margin:5px 0 0; color:var(--muted); font-size:14.5px; line-height:1.5}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <div class="mark"></div>
+    <div>
+      <div class="wordmark">ElectricBill<span>Refund</span></div>
+      <div class="tag">Utility Audit &amp; Recovery</div>
+    </div>
+  </div>
+
+  <div class="page-title">
+    <h1>Account Questionnaire</h1>
+  </div>
+
+  <div class="card">
+    <div class="progress"><div class="bar" id="bar"></div></div>
+    <div class="count" id="count"></div>
+
+    <form id="form" action="https://formspree.io/f/meeblvgr" method="POST">
+      <input type="hidden" name="_subject" value="New EBR Audit Intake submission">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+      <!-- ===== STEP 1: GENERAL (once) ===== -->
+      <section class="step" data-step="0">
+        <div class="head">
+          <div class="eyebrow">● Getting started</div>
+          <h1 class="step-name">Your details</h1>
+          <p class="step-sub">A quick profile so we can audit your Ameren account(s) thoroughly. It takes about 3–5 minutes, and you’ll need a recent Ameren bill on hand for the account number. Everything is kept strictly confidential.</p>
+        </div>
+        <div class="body">
+          <div class="q"><label class="lab">Business name (as it operates) <span class="req">*</span></label>
+            <input type="text" name="Business Name" data-req></div>
+          <div class="q"><label class="lab">Main contact for EBR to work with on the audit <span class="req">*</span></label>
+            <p class="hint">The person we’ll coordinate with — can be the owner or someone else.</p>
+            <input type="text" name="Contact Name" data-req placeholder="Full name"></div>
+          <div class="q"><label class="lab">Their role / title <span class="req">*</span></label>
+            <input type="text" name="Contact Role" data-req placeholder="e.g. Owner, Office Manager, Controller"></div>
+          <div class="q"><label class="lab">Phone number <span class="req">*</span></label>
+            <input type="tel" name="Contact Phone" data-req></div>
+          <div class="q"><label class="lab">Email <span class="req">*</span></label>
+            <input type="email" name="email" data-req></div>
+          <div class="q"><label class="lab">How many Ameren accounts / locations should we audit? <span class="req">*</span></label>
+            <div class="opts grid" data-radio>
+              <label class="opt"><input type="radio" name="Number of Accounts" value="Just one" data-req><span class="dot"></span>Just one</label>
+              <label class="opt"><input type="radio" name="Number of Accounts" value="2-3"><span class="dot"></span>2–3</label>
+              <label class="opt"><input type="radio" name="Number of Accounts" value="4 or more"><span class="dot"></span>4 or more</label>
+            </div></div>
+          <div class="q"><label class="lab">Average total monthly electric bill (all accounts combined) <span class="req">*</span></label>
+            <div class="opts grid" data-radio>
+              <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="Under $1,000" data-req><span class="dot"></span>Under $1,000</label>
+              <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="$1,000-$3,000"><span class="dot"></span>$1,000–$3,000</label>
+              <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="$3,000-$7,000"><span class="dot"></span>$3,000–$7,000</label>
+              <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="$7,000-$15,000"><span class="dot"></span>$7,000–$15,000</label>
+              <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="Over $15,000"><span class="dot"></span>Over $15,000</label>
+              <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="Not sure"><span class="dot"></span>Not sure</label>
+            </div></div>
+          <div class="q"><label class="lab">Has the business ever had a billing adjustment, refund, credit, rate review, or dispute with Ameren? <span class="req">*</span></label>
+            <div class="opts grid" data-radio>
+              <label class="opt"><input type="radio" name="Prior Adjustment History" value="No" data-req><span class="dot"></span>No</label>
+              <label class="opt"><input type="radio" name="Prior Adjustment History" value="Yes"><span class="dot"></span>Yes</label>
+              <label class="opt"><input type="radio" name="Prior Adjustment History" value="Not sure"><span class="dot"></span>Not sure</label>
+            </div></div>
+          <div class="q"><label class="lab">Anything else we should know? (optional)</label>
+            <textarea name="General Notes" placeholder="Helpful examples: a meter or bill you think might be wrong; a location with unusually high bills; a recent ownership change, move, or expansion; or any past billing problem you remember."></textarea></div>
+          <div class="err" id="e0">Please complete the required fields above.</div>
+        </div>
+      </section>
+
+      <!-- ===== STEP 2: ACCOUNTS (repeatable, two-button ending) ===== -->
+      <section class="step" data-step="1" hidden>
+        <div class="head">
+          <div class="eyebrow">● Your account(s)</div>
+          <h1 class="step-name">Account questions</h1>
+          <p class="step-sub">For each Ameren account we’re auditing, we have a few specific questions — about 2–3 minutes per account. The account number is how we match your answers to the right bills.</p>
+        </div>
+        <div class="body">
+          <div id="accts"></div>
+
+          <div class="ending">
+            <div class="ending-q">Do you have more accounts to add?</div>
+            <div class="ending-btns">
+              <button type="button" class="ebtn ebtn-add" id="addAcct">
+                <span class="eicon">＋</span>
+                <span>Yes, I have another account to add<small>Adds another set of questions below — nothing is sent yet.</small></span>
+              </button>
+              <button type="button" class="ebtn ebtn-submit" id="submitBtn">
+                <span class="eicon">✓</span>
+                <span id="submitLabel">That’s my only account — Submit<small>Sends everything to EBR.</small></span>
+              </button>
+            </div>
+            <div class="err" id="e1">Please complete the required fields in each account before submitting.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="nav" id="nav">
+        <button type="button" class="back" id="back" hidden>← Back</button>
+        <button type="button" class="next" id="next">Continue</button>
+      </div>
+    </form>
+
+    <div class="done" id="done">
+      <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#23854a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h2>Thanks — we’ve got everything</h2>
+      <p>We’ll start pulling your Ameren records right away and reach out if we have any questions.</p>
+    </div>
+  </div>
+  <div class="foot">Electric Bill Refund LLC · Information is used solely for your utility billing review and kept strictly confidential.</div>
+</div>
+
+<!-- Template for one account block -->
+<template id="acctTpl">
+  <div class="acct" data-acct>
+    <div class="acct-head">
+      <div class="acct-title">Account <span class="acct-n">1</span></div>
+      <button type="button" class="acct-remove" hidden>Remove</button>
+    </div>
+
+    <div class="q"><label class="lab">Ameren account number <span class="req">*</span></label>
+      <p class="hint">From a recent bill for this location.</p>
+      <input type="text" data-name="Account Number" data-req></div>
+
+    <div class="q"><label class="lab">Which best describes this site? <span class="req">*</span></label>
+      <select data-name="Site Type" data-req>
+        <option value="">Select one…</option>
+        <option>Warehouse / Distribution / Logistics</option>
+        <option>Self Storage</option>
+        <option>Cold Storage / Refrigerated Warehouse</option>
+        <option>Manufacturing / Processing / Industrial</option>
+        <option>Restaurant / Food Service</option>
+        <option>Hotel / Hospitality</option>
+        <option>Healthcare / Senior Living</option>
+        <option>Retail</option>
+        <option>Office Building</option>
+        <option>Auto Dealership / Auto Service</option>
+        <option>Church / Nonprofit</option>
+        <option>Municipality / Government</option>
+        <option>Other</option>
+      </select></div>
+
+    <div class="q"><label class="lab">In a sentence or two, what physically happens here? <span class="req">*</span></label>
+      <p class="hint">e.g. “We store and ship packaged goods,” or “We run injection-molding machines making plastic parts.”</p>
+      <textarea data-name="What Happens Here" data-req></textarea></div>
+
+    <div class="q"><label class="lab">Approximate facility size <span class="req">*</span></label>
+      <div class="opts grid" data-radiogroup="Facility Size">
+        <label class="opt"><input type="radio" value="Under 5,000 sq ft" data-req><span class="dot"></span>Under 5,000 sq ft</label>
+        <label class="opt"><input type="radio" value="5,000-20,000 sq ft"><span class="dot"></span>5,000–20,000 sq ft</label>
+        <label class="opt"><input type="radio" value="20,000-50,000 sq ft"><span class="dot"></span>20,000–50,000 sq ft</label>
+        <label class="opt"><input type="radio" value="Over 50,000 sq ft"><span class="dot"></span>Over 50,000 sq ft</label>
+        <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
+      </div></div>
+
+    <div class="q"><label class="lab">Is the space heated and/or air-conditioned? <span class="req">*</span></label>
+      <div class="opts" data-radiogroup="Climate Controlled">
+        <label class="opt"><input type="radio" value="Fully climate-controlled" data-req><span class="dot"></span>Yes, fully climate-controlled</label>
+        <label class="opt"><input type="radio" value="Partially"><span class="dot"></span>Partially (some areas)</label>
+        <label class="opt"><input type="radio" value="Not climate-controlled"><span class="dot"></span>No, not climate-controlled</label>
+        <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
+      </div></div>
+
+    <div class="q"><label class="lab">Typical operating schedule <span class="req">*</span></label>
+      <div class="opts grid" data-radiogroup="Operating Schedule">
+        <label class="opt"><input type="radio" value="24/7" data-req><span class="dot"></span>24/7</label>
+        <label class="opt"><input type="radio" value="Standard business hours"><span class="dot"></span>Standard business hours</label>
+        <label class="opt"><input type="radio" value="Extended hours / weekends"><span class="dot"></span>Extended hours / weekends</label>
+        <label class="opt"><input type="radio" value="Seasonal"><span class="dot"></span>Seasonal</label>
+      </div></div>
+
+    <div class="q"><label class="lab">Which of these does this site use? <span class="req">*</span></label>
+      <p class="hint">Check all that apply.</p>
+      <div class="opts grid" data-checkgroup="Systems In Use">
+        <label class="opt box"><input type="checkbox" value="Large HVAC / chillers"><span class="dot"></span>Large HVAC / chillers</label>
+        <label class="opt box"><input type="checkbox" value="Refrigeration / cold storage"><span class="dot"></span>Refrigeration / cold storage</label>
+        <label class="opt box"><input type="checkbox" value="Compressors / large motors"><span class="dot"></span>Compressors / large motors</label>
+        <label class="opt box"><input type="checkbox" value="Industrial / production machinery"><span class="dot"></span>Industrial / production machinery</label>
+        <label class="opt box"><input type="checkbox" value="Commercial kitchen equipment"><span class="dot"></span>Commercial kitchen equipment</label>
+        <label class="opt box"><input type="checkbox" value="Medical / lab equipment"><span class="dot"></span>Medical / lab equipment</label>
+        <label class="opt box"><input type="checkbox" value="EV charging stations"><span class="dot"></span>EV charging stations</label>
+        <label class="opt box"><input type="checkbox" value="Power factor / capacitor banks"><span class="dot"></span>Power factor / capacitor banks</label>
+        <label class="opt box"><input type="checkbox" value="None of the above"><span class="dot"></span>None of the above</label>
+        <label class="opt box"><input type="checkbox" value="Not sure"><span class="dot"></span>Not sure</label>
+      </div></div>
+
+    <div class="q"><label class="lab">Any on-site solar, generators, or battery storage? <span class="req">*</span></label>
+      <div class="opts grid" data-radiogroup="On-Site Generation">
+        <label class="opt"><input type="radio" value="No" data-req><span class="dot"></span>No</label>
+        <label class="opt"><input type="radio" value="Yes - solar"><span class="dot"></span>Yes — solar</label>
+        <label class="opt"><input type="radio" value="Yes - generator/battery"><span class="dot"></span>Yes — generator / battery</label>
+        <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
+      </div></div>
+
+    <div class="q"><label class="lab">Renovations, expansions, equipment changes, or shutdowns here in the last 3 years? <span class="req">*</span></label>
+      <div class="opts" data-radiogroup="Renovations" data-reveal>
+        <label class="opt"><input type="radio" value="No" data-req><span class="dot"></span>No</label>
+        <label class="opt"><input type="radio" value="Yes" data-showmore><span class="dot"></span>Yes</label>
+        <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
+      </div>
+      <div class="reveal" data-more hidden><textarea data-name="Renovations Detail" placeholder="Briefly describe, with rough dates"></textarea></div></div>
+
+    <div class="q"><label class="lab">Any vacant space, or a tenant move in/out here in the last 3 years? <span class="req">*</span></label>
+      <div class="opts" data-radiogroup="Vacancy" data-reveal>
+        <label class="opt"><input type="radio" value="No" data-req><span class="dot"></span>No</label>
+        <label class="opt"><input type="radio" value="Yes" data-showmore><span class="dot"></span>Yes</label>
+        <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
+      </div>
+      <div class="reveal" data-more hidden><textarea data-name="Vacancy Detail" placeholder="Briefly describe, with rough dates"></textarea></div></div>
+
+    <div class="q"><label class="lab">Do you currently claim any sales-tax exemption on this account’s electric bill? <span class="req">*</span></label>
+      <div class="opts grid" data-radiogroup="Claims Exemption">
+        <label class="opt"><input type="radio" value="No" data-req><span class="dot"></span>No</label>
+        <label class="opt"><input type="radio" value="Yes"><span class="dot"></span>Yes</label>
+        <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
+      </div></div>
+
+    <div class="q"><label class="lab">Does this site manufacture, process, assemble, refine, or produce any physical product on-site? <span class="req">*</span></label>
+      <div class="opts" data-radiogroup="Manufactures" data-maker>
+        <label class="opt"><input type="radio" value="Yes" data-req data-mk="yes"><span class="dot"></span>Yes</label>
+        <label class="opt"><input type="radio" value="No" data-mk="no"><span class="dot"></span>No</label>
+        <label class="opt"><input type="radio" value="Not sure" data-mk="yes"><span class="dot"></span>Not sure</label>
+      </div></div>
+
+    <div class="reveal" data-prod hidden>
+      <div class="q"><label class="lab">What product(s) are made or processed here? <span class="req">*</span></label>
+        <textarea data-name="Products Made" data-reqif></textarea></div>
+      <div class="q"><label class="lab">Roughly what % of floor space is production vs. office/storage/other? <span class="req">*</span></label>
+        <input type="text" data-name="Production Floor %" data-reqif placeholder="e.g. about 70% production, 30% office"></div>
+      <div class="q"><label class="lab">Is production equipment on the same meter as offices/lighting, or separate? <span class="req">*</span></label>
+        <div class="opts" data-radiogroup="Production Meter" data-reqifgroup>
+          <label class="opt"><input type="radio" value="Same meter"><span class="dot"></span>Same meter (everything combined)</label>
+          <label class="opt"><input type="radio" value="Separate meters"><span class="dot"></span>Separate meters</label>
+          <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
+        </div></div>
+    </div>
+  </div>
+</template>
+
+<script>
+(function(){
+  var form=document.getElementById('form');
+  var steps=[].slice.call(document.querySelectorAll('.step'));
+  var bar=document.getElementById('bar'), count=document.getElementById('count');
+  var back=document.getElementById('back'), next=document.getElementById('next'), nav=document.getElementById('nav');
+  var done=document.getElementById('done');
+  var accts=document.getElementById('accts'), addBtn=document.getElementById('addAcct');
+  var submitBtn=document.getElementById('submitBtn'), submitLabel=document.getElementById('submitLabel');
+  var tpl=document.getElementById('acctTpl');
+  var cur=0, submitted=false, touched=false;
+
+  // warn before leaving if they've started but not submitted
+  window.addEventListener('beforeunload', function(e){
+    if(touched && !submitted){ e.preventDefault(); e.returnValue=''; }
+  });
+  form.addEventListener('input', function(){ touched=true; });
+  form.addEventListener('change', function(){ touched=true; });
+
+  function renumber(){
+    var blocks=[].slice.call(accts.querySelectorAll('[data-acct]'));
+    blocks.forEach(function(b,i){
+      b.querySelector('.acct-n').textContent=i+1;
+      b.querySelector('.acct-remove').hidden = blocks.length===1;
+    });
+    submitLabel.firstChild.textContent = blocks.length>1 ? ('Submit all '+blocks.length+' accounts') : 'That’s my only account — Submit';
+  }
+
+  function wireBlock(b){
+    b.querySelectorAll('[data-reveal]').forEach(function(group){
+      var more=group.parentNode.querySelector('[data-more]');
+      group.querySelectorAll('input[type=radio]').forEach(function(r){
+        r.addEventListener('change', function(){ more.hidden = !this.hasAttribute('data-showmore'); });
+      });
+    });
+    var maker=b.querySelector('[data-maker]'); var prod=b.querySelector('[data-prod]');
+    maker.querySelectorAll('input[type=radio]').forEach(function(r){
+      r.addEventListener('change', function(){ prod.hidden = this.getAttribute('data-mk')!=='yes'; });
+    });
+    b.querySelector('.acct-remove').addEventListener('click', function(){ b.remove(); renumber(); });
+  }
+
+  function addBlock(){
+    var node=tpl.content.firstElementChild.cloneNode(true);
+    accts.appendChild(node); wireBlock(node); renumber(); return node;
+  }
+  addBtn.addEventListener('click', function(){
+    // require current accounts valid before adding another, so nothing gets skipped
+    if(!validateAccounts()){ document.getElementById('e1').classList.add('show'); return; }
+    document.getElementById('e1').classList.remove('show');
+    var n=addBlock();
+    n.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  addBlock();
+
+  function show(i){
+    steps.forEach(function(s,idx){ s.hidden=idx!==i; });
+    cur=i;
+    bar.style.width=(i/(steps.length-1)*100)+'%';
+    count.textContent='Step '+(i+1)+' of '+steps.length;
+    back.hidden=i===0;
+    nav.hidden = (i===steps.length-1); // hide Continue on the accounts step; submit lives in the ending buttons
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function validateGeneral(){
+    var sec=steps[0]; var ok=true;
+    sec.querySelectorAll('input[data-req],textarea[data-req]').forEach(function(el){ if(!el.value.trim())ok=false; });
+    var groups={}; sec.querySelectorAll('input[type=radio][data-req]').forEach(function(r){groups[r.name]=true;});
+    Object.keys(groups).forEach(function(n){ if(!sec.querySelector('input[name="'+n+'"]:checked'))ok=false; });
+    return ok;
+  }
+  function validateAccounts(){
+    var ok=true;
+    [].slice.call(accts.querySelectorAll('[data-acct]')).forEach(function(b){
+      b.querySelectorAll('input[data-name][data-req],textarea[data-name][data-req],select[data-name][data-req]').forEach(function(el){ if(!el.value.trim())ok=false; });
+      b.querySelectorAll('[data-radiogroup]').forEach(function(g){ if(g.querySelector('input[data-req]') && !g.querySelector('input:checked'))ok=false; });
+      b.querySelectorAll('[data-checkgroup]').forEach(function(g){ if(!g.querySelector('input:checked'))ok=false; });
+      var prod=b.querySelector('[data-prod]');
+      if(prod && !prod.hidden){
+        prod.querySelectorAll('[data-reqif]').forEach(function(el){ if(!el.value.trim())ok=false; });
+        prod.querySelectorAll('[data-reqifgroup]').forEach(function(g){ if(!g.querySelector('input:checked'))ok=false; });
+      }
+    });
+    return ok;
+  }
+
+  function serialize(){
+    [].slice.call(form.querySelectorAll('[data-generated]')).forEach(function(n){n.remove();});
+    var blocks=[].slice.call(accts.querySelectorAll('[data-acct]'));
+    blocks.forEach(function(b,idx){
+      var p='Account '+(idx+1)+' - ';
+      function put(name,val){ if(val===''||val==null)return;
+        var h=document.createElement('input'); h.type='hidden'; h.setAttribute('data-generated','1'); h.name=p+name; h.value=val; form.appendChild(h); }
+      b.querySelectorAll('[data-name]').forEach(function(el){
+        if(el.closest('[data-more]') && el.closest('[data-more]').hidden) return;
+        if(el.closest('[data-prod]') && el.closest('[data-prod]').hidden) return;
+        put(el.getAttribute('data-name'), el.value.trim());
+      });
+      b.querySelectorAll('[data-radiogroup]').forEach(function(g){
+        if(g.closest('[data-prod]') && g.closest('[data-prod]').hidden) return;
+        var c=g.querySelector('input:checked'); if(c)put(g.getAttribute('data-radiogroup'), c.value);
+      });
+      b.querySelectorAll('[data-checkgroup]').forEach(function(g){
+        var vals=[].slice.call(g.querySelectorAll('input:checked')).map(function(c){return c.value;});
+        if(vals.length)put(g.getAttribute('data-checkgroup'), vals.join(', '));
+      });
+    });
+    // hidden summary field
+    var h=document.createElement('input'); h.type='hidden'; h.setAttribute('data-generated','1');
+    h.name='Total Accounts Submitted'; h.value=String(blocks.length); form.appendChild(h);
+  }
+
+  next.addEventListener('click', function(){
+    if(cur===0){ if(!validateGeneral()){ document.getElementById('e0').classList.add('show'); return; } document.getElementById('e0').classList.remove('show'); show(1); }
+  });
+  back.addEventListener('click', function(){ if(cur>0)show(cur-1); });
+
+  submitBtn.addEventListener('click', function(){
+    if(!validateAccounts()){ document.getElementById('e1').classList.add('show'); return; }
+    document.getElementById('e1').classList.remove('show');
+    var n=accts.querySelectorAll('[data-acct]').length;
+    var msg = n>1
+      ? ('Submit all '+n+' accounts to EBR now?')
+      : 'Submit your account to EBR now?';
+    if(!confirm(msg)) return;
+    serialize();
+    submitBtn.disabled=true; submitLabel.firstChild.textContent='Submitting…';
+    var data=new FormData(form);
+    fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){ submitted=true; showDone(); }
+        else { r.json().then(function(d){ alert((d&&d.errors)? d.errors.map(function(e){return e.message;}).join(', ') : 'Something went wrong. Please try again.'); }).catch(function(){alert('Something went wrong. Please try again.');}); submitBtn.disabled=false; renumber(); }
+      })
+      .catch(function(){ alert('Network error — please check your connection and try again.'); submitBtn.disabled=false; renumber(); });
+  });
+
+  function showDone(){
+    form.style.display='none'; nav.style.display='none';
+    document.querySelector('.progress').style.display='none'; count.style.display='none';
+    done.classList.add('show'); window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  show(0);
+})();
+</script>
+</body>
+</html>
