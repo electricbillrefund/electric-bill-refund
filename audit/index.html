@@ -173,7 +173,8 @@
               <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="$1,000-$3,000"><span class="dot"></span>$1,000–$3,000</label>
               <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="$3,000-$7,000"><span class="dot"></span>$3,000–$7,000</label>
               <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="$7,000-$15,000"><span class="dot"></span>$7,000–$15,000</label>
-              <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="Over $15,000"><span class="dot"></span>Over $15,000</label>
+              <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="$15,000-$50,000"><span class="dot"></span>$15,000–$50,000</label>
+              <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="Over $50,000"><span class="dot"></span>Over $50,000</label>
               <label class="opt"><input type="radio" name="Avg Monthly Bill (Total)" value="Not sure"><span class="dot"></span>Not sure</label>
             </div></div>
           <div class="q"><label class="lab">Has the business ever had a billing adjustment, refund, credit, rate review, or dispute with Ameren? <span class="req">*</span></label>
@@ -242,6 +243,10 @@
       <p class="hint">From a recent bill for this location.</p>
       <input type="text" data-name="Account Number" data-req></div>
 
+    <div class="q"><label class="lab">Service address for this account <span class="req">*</span></label>
+      <p class="hint">Street, city, and ZIP — the physical location this account powers.</p>
+      <input type="text" data-name="Service Address" data-req></div>
+
     <div class="q"><label class="lab">Which best describes this site? <span class="req">*</span></label>
       <select data-name="Site Type" data-req>
         <option value="">Select one…</option>
@@ -272,6 +277,17 @@
         <label class="opt"><input type="radio" value="Over 50,000 sq ft"><span class="dot"></span>Over 50,000 sq ft</label>
         <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
       </div></div>
+
+    <div class="q"><label class="lab">How many separate electric meters are at this location? <span class="req">*</span></label>
+      <div class="opts grid" data-radiogroup="Number of Meters">
+        <label class="opt"><input type="radio" value="One" data-req><span class="dot"></span>One</label>
+        <label class="opt"><input type="radio" value="2-3"><span class="dot"></span>2–3</label>
+        <label class="opt"><input type="radio" value="4 or more"><span class="dot"></span>4 or more</label>
+        <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
+      </div></div>
+
+    <div class="q"><label class="lab">Are any of those meters for space you no longer use, or that might be inactive? (optional)</label>
+      <textarea data-name="Possibly Inactive Meters" placeholder="e.g. a meter for a vacated suite, old signage, or equipment that's been removed"></textarea></div>
 
     <div class="q"><label class="lab">Is the space heated and/or air-conditioned? <span class="req">*</span></label>
       <div class="opts" data-radiogroup="Climate Controlled">
