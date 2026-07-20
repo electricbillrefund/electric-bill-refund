@@ -147,7 +147,7 @@
         <div class="head">
           <div class="eyebrow">● Getting started</div>
           <h1 class="step-name">Your details</h1>
-          <p class="step-sub">A quick profile so we can audit your Ameren account(s) thoroughly. It takes about 3–5 minutes, and you’ll need a recent Ameren bill on hand for the account number. Everything is kept strictly confidential.</p>
+          <p class="step-sub">A quick profile so we can audit your Ameren account(s) thoroughly. These questions are tailored to help us analyze your account in more depth and catch more potential errors in Ameren’s billing. It takes about 3–5 minutes, and you’ll need a recent Ameren bill on hand for the account number. Everything is kept strictly confidential.</p>
         </div>
         <div class="body">
           <div class="q"><label class="lab">Business name (as it operates) <span class="req">*</span></label>
@@ -286,6 +286,15 @@
         <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
       </div></div>
 
+    <div class="q"><label class="lab">Electrical service voltage / phase (if you know it)</label>
+      <p class="hint">Often on an electrician's report or an equipment nameplate — leave on "Not sure" if unsure.</p>
+      <div class="opts grid" data-radiogroup="Service Voltage/Phase">
+        <label class="opt"><input type="radio" value="120/240V single-phase"><span class="dot"></span>120/240V single-phase</label>
+        <label class="opt"><input type="radio" value="120/208V three-phase"><span class="dot"></span>120/208V three-phase</label>
+        <label class="opt"><input type="radio" value="277/480V three-phase"><span class="dot"></span>277/480V three-phase</label>
+        <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
+      </div></div>
+
     <div class="q"><label class="lab">Are any of those meters for space you no longer use, or that might be inactive? (optional)</label>
       <textarea data-name="Possibly Inactive Meters" placeholder="e.g. a meter for a vacated suite, old signage, or equipment that's been removed"></textarea></div>
 
@@ -304,6 +313,17 @@
         <label class="opt"><input type="radio" value="Extended hours / weekends"><span class="dot"></span>Extended hours / weekends</label>
         <label class="opt"><input type="radio" value="Seasonal"><span class="dot"></span>Seasonal</label>
       </div></div>
+
+    <div class="q"><label class="lab">Does this site fully shut down or sit idle for part of the year? <span class="req">*</span></label>
+      <div class="opts grid" data-radiogroup="Seasonal Shutdown">
+        <label class="opt"><input type="radio" value="No, runs year-round" data-req><span class="dot"></span>No — runs year-round</label>
+        <label class="opt"><input type="radio" value="Yes, a few weeks"><span class="dot"></span>Yes — a few weeks</label>
+        <label class="opt"><input type="radio" value="Yes, one or more months"><span class="dot"></span>Yes — a month or more</label>
+        <label class="opt"><input type="radio" value="Not sure"><span class="dot"></span>Not sure</label>
+      </div></div>
+
+    <div class="q"><label class="lab">If it shuts down seasonally, roughly which months? (optional)</label>
+      <input type="text" data-name="Shutdown Months" placeholder="e.g. mid-December through February"></div>
 
     <div class="q"><label class="lab">Which of these does this site use? <span class="req">*</span></label>
       <p class="hint">Check all that apply.</p>
